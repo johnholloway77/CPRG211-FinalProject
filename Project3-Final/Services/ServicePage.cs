@@ -23,10 +23,7 @@ namespace Project3_Final.Services
 
         internal void Initialize()
         {
-            //server = "localhost";
-            //database = "connectcsharptomysql";
-            //uid = "John";
-            //password = "Johnpass!";
+            
 
             server = "johnholloway.ca";
             port = "3306";
