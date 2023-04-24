@@ -9,19 +9,19 @@ namespace Project3_Final.Services
 {
     public abstract class ServicePage
     {
-        internal MySqlConnection connection;
-        internal string server;
-        internal string port;
-        internal string database;
-        internal string uid;
-        internal string password;
+        static internal MySqlConnection connection;
+        static internal string server;
+        static internal string port;
+        static internal string database;
+        static internal string uid;
+        static internal string password;
 
         public ServicePage()
         {
             Initialize();
         }
 
-        internal void Initialize()
+        public static void Initialize()
         {
             
 
@@ -38,7 +38,7 @@ namespace Project3_Final.Services
         }
 
         //open connection to DB
-        internal bool OpenConnection()
+        internal static bool OpenConnection()
         {
             try
             {
@@ -64,7 +64,7 @@ namespace Project3_Final.Services
         }
 
         //close connection  to Db
-        internal bool CloseConnection()
+        internal static bool CloseConnection()
         {
             try
             {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project3_Final.Models
 {
-    internal class Customer: Person
+    public class Customer: Person
     {
         private int custID;
         private DateTime dateOfBirth;

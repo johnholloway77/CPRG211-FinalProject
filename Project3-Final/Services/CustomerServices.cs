@@ -10,20 +10,23 @@ using System.Threading.Tasks;
 
 namespace Project3_Final.Services
 {
-    public class CustomerServices : ServicePage, ImySqlConnectable
+    public class CustomerServices : ServicePage //, ImySqlConnectable
     {
         //Initialize List<Customers> which will store the Customer Objects to be manipulated.
-        List<Customer> customers = new List<Customer>();
 
-        public void LoadFromDatabase()
+        public static List<Customer> customers = new List<Customer>();
+
+        public static void LoadFromDatabase()
         {
+            
+
             //ensure that List<Customers> is empty whenever method is run. Will prevent duplication in List
             customers.Clear();
 
             //Query string will select all rows of data from table customers
             string query = "SELECT * FROM customers";
 
-            if (this.OpenConnection() == true)
+            if (OpenConnection() == true)
             {
                 MySqlCommand cmd = new MySqlCommand(query, connection);
 
@@ -41,7 +44,7 @@ namespace Project3_Final.Services
 
                 dataReader.Close();
 
-                this.CloseConnection();
+                CloseConnection();
 
             }
             else
@@ -51,12 +54,12 @@ namespace Project3_Final.Services
 
         }
 
-        public void AddToDatabase(int custID, string firstName, string lastName, string phoneNumber, string email, string dateOfBirth, string membershipType, bool accountStatus)
+        public static void AddToDatabase(int custID, string firstName, string lastName, string phoneNumber, string email, string dateOfBirth, string membershipType, bool accountStatus)
         {
             string query = $"INSERT INTO customers (custID, firstName, lastName, phoneNumber, email, dateOfBirth, membershipType, accountStatus) VALUES ({custID}, {firstName}, {lastName}, {phoneNumber}, {email}, STR_TO_DATE('{dateOfBirth}', '%Y-%m-%d'), {membershipType}, {accountStatus})";
 
 
-            if (this.OpenConnection() == true)
+            if (OpenConnection() == true)
             {
                 //create command and assign the query and connection from the constructor
                 MySqlCommand cmd = new MySqlCommand(query, connection);
@@ -65,16 +68,16 @@ namespace Project3_Final.Services
                 cmd.ExecuteNonQuery();
 
                 //close
-                this.CloseConnection();
+                CloseConnection();
             }
         }
 
 
-        public void UpdateRecord(int custID, string firstName, string lastName, string phoneNumber, string email, string dateOfBirth, string membershipType, bool accountStatus)
+        public static void UpdateRecord(int custID, string firstName, string lastName, string phoneNumber, string email, DateTime dateOfBirth, string membershipType, bool accountStatus)
         {
-            string query = $"UPDATE customers SET firstName='{firstName}', lastName='{lastName}', phoneNumber='{phoneNumber}', email='{email}', dateOfBirth=STR_TO_DATE('{dateOfBirth}', '%Y-%m-%d'), membershipType='{membershipType}', accountStatus={accountStatus}  WHERE custID='{custID}'";
+            string query = $"UPDATE customers SET firstName='{firstName}', lastName='{lastName}', phoneNumber='{phoneNumber}', email='{email}', dateOfBirth=STR_TO_DATE('{dateOfBirth.ToString("yyyy-MM-dd")}','%Y-%m-%d'), membershipType='{membershipType}', accountStatus={accountStatus}  WHERE custID='{custID}'";
 
-            if (this.OpenConnection() == true)
+            if (OpenConnection() == true)
             {
                 MySqlCommand cmd = new MySqlCommand();
 
@@ -84,7 +87,7 @@ namespace Project3_Final.Services
 
                 cmd.ExecuteNonQuery();
 
-                this.CloseConnection();
+                CloseConnection();
             }
             else
             {
@@ -92,7 +95,7 @@ namespace Project3_Final.Services
             }
         }
 
-
+       
 
 
     }

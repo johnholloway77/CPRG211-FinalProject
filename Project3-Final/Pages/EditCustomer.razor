@@ -1,0 +1,86 @@
+﻿@page "/editCustomer"
+@using Project3_Final.Services;
+@using Project3_Final.Models;
+@using Microsoft.AspNetCore.Components.Forms
+
+@inject NavigationManager navHelper
+
+
+<body>
+<h3>EditCustomer</h3>
+
+
+         <table class="table">
+          <thead>
+                <tr>
+                <th>Field</th>
+                <th>Value</th>
+        </tr>
+            </thead>
+             <tbody>
+        
+        <tr>
+            <td>First name</td>
+            <td><input type="text" @bind="@customerToEdit2.FirstName"/></td>
+            
+        </tr>
+        <tr>
+            <td>Last name</td>
+                <td><input type="text" @bind="@customerToEdit2.LastName"/></td>
+        </tr>
+        <tr>
+            <td>Phone Number</td>
+                <td><input type="text"  @bind="@customerToEdit2.PhoneNumber" /></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+                <td><input type="email" @bind="@customerToEdit2.Email" /></td>
+        </tr>
+        <tr>
+            <td>Birthday</td>
+                <td><input type="date" @bind="@customerToEdit2.DateOfBirth"/></td>
+        </tr>
+        <tr>
+            <td>Membership Type</td>
+            <td>@customerToEdit2.MembershipType</td>
+        </tr>
+        <tr>
+            <td>Account Status</td>
+            <td>@customerToEdit2.AccountStatus</td>
+        </tr>
+
+            <btn class="btn btn-primary" @onclick="updateCustomer">Update</btn>
+
+    </tbody>
+        </table>
+ 
+</body>
+
+@code {
+    public static Customer? customerToEdit2;
+
+
+    //private static string? firstName;
+
+    //private static string? lastName;
+    //private static string? phoneNumber;
+    //private static string? email;
+    //private static string dateOfBirth = "1988-06-06";
+    //private static string? membershipType = "annual";
+    //private static bool accountStatus = true;
+
+    //public Customer customerUpdated = new Customer(customerToEdit2.CustID, firstName, lastName, phoneNumber, email, dateOfBirth, membershipType, accountStatus);
+
+    void updateCustomer()
+    {
+        //customerUpdated = customerToEdit2;
+        
+
+        Services.CustomerServices.UpdateRecord(customerToEdit2.CustID, customerToEdit2.FirstName, customerToEdit2.LastName, customerToEdit2.PhoneNumber, customerToEdit2.Email, customerToEdit2.DateOfBirth, customerToEdit2.MembershipType, customerToEdit2.AccountStatus);
+
+        Application.Current.MainPage.DisplayAlert("Note:", $"UpdateRecord() request sent for {customerToEdit2.FirstName} {customerToEdit2.LastName}", "Okay");
+
+        navHelper.NavigateTo("customer");
+    }
+}
+

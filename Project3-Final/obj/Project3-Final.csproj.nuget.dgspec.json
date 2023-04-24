@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\Project3-Final.csproj": {}
+    "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\Project3-Final.csproj": {}
   },
   "projects": {
-    "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\Project3-Final.csproj": {
+    "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\Project3-Final.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\Project3-Final.csproj",
+        "projectUniqueName": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\Project3-Final.csproj",
         "projectName": "Project3-Final",
-        "projectPath": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\Project3-Final.csproj",
+        "projectPath": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\Project3-Final.csproj",
         "packagesPath": "C:\\Users\\John\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\obj\\",
+        "outputPath": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [

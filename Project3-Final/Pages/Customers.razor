@@ -1,0 +1,50 @@
+﻿@page "/customer"
+
+@using Project3_Final.Services;
+@using Project3_Final.Models;
+
+@inject NavigationManager navHelper
+
+<h1>Customers</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Phone number</th>
+            <th>Email</th>
+            <th>Birthday</th>
+            <th>Membership Type</th>
+            <th>Account Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Customer customer in CustomerServices.customers)
+        {
+          
+               <tr>
+                <td>@customer.FirstName</td>
+                <td>@customer.LastName</td>
+                <td>@customer.PhoneNumber</td>
+                <td>@customer.Email</td>
+                <td>@customer.DateOfBirth.ToString("yyyy-MM-dd")</td>
+                <td>@customer.MembershipType</td>
+                <td>@customer.AccountStatus</td>
+                <button class="btn-outline-primary" @onclick="() => LoadEditPage(customer)">Edit</button>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+
+@code {
+
+    internal void LoadEditPage(Customer customerToEdit)
+    {
+        EditCustomer.customerToEdit2 = customerToEdit;
+        navHelper.NavigateTo("editCustomer");
+    }
+}

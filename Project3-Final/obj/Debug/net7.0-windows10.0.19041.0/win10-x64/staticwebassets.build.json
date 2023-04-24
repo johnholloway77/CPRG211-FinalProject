@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lfuPuKT4Lfm/JCHiFfpn8wW/jxS+VU6Vy44fgkUkDP8=",
+  "Hash": "aBINRujdccZP85AZrSW6HZ+TYQy7LC8c/d+m+HWDwpQ=",
   "Source": "Project3-Final",
   "BasePath": "/",
   "Mode": "Root",
@@ -10,17 +10,17 @@
     {
       "Name": "Project3-Final\\wwwroot",
       "Source": "Project3-Final",
-      "ContentRoot": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
       "BasePath": "/",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\obj\\Debug\\net7.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\Project3-Final.styles.css",
+      "Identity": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\obj\\Debug\\net7.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\Project3-Final.styles.css",
       "SourceId": "Project3-Final",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\obj\\Debug\\net7.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\obj\\Debug\\net7.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\",
       "BasePath": "/",
       "RelativePath": "Project3-Final.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\obj\\Debug\\net7.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\Project3-Final.styles.css"
+      "OriginalItemSpec": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\obj\\Debug\\net7.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\Project3-Final.styles.css"
     },
     {
-      "Identity": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\obj\\Debug\\net7.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\Project3-Final.bundle.scp.css",
+      "Identity": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\obj\\Debug\\net7.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\Project3-Final.bundle.scp.css",
       "SourceId": "Project3-Final",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\obj\\Debug\\net7.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\obj\\Debug\\net7.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\",
       "BasePath": "/",
       "RelativePath": "Project3-Final.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\obj\\Debug\\net7.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\Project3-Final.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\obj\\Debug\\net7.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\Project3-Final.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\app.css",
+      "Identity": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\app.css",
       "SourceId": "Project3-Final",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/app.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\app.css"
     },
     {
-      "Identity": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "Project3-Final",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "Project3-Final",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "Project3-Final",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "Project3-Final",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "Project3-Final",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "Project3-Final",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "Project3-Final",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "Project3-Final",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "Project3-Final",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "Project3-Final",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "Project3-Final",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\favicon.ico",
       "SourceId": "Project3-Final",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\index.html",
       "SourceId": "Project3-Final",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\John\\Source\\Repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
       "BasePath": "/",
       "RelativePath": "index.html",
       "AssetKind": "All",

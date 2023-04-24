@@ -15,6 +15,10 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 			});
 
+		//Initialize the connection on ServicePage
+		//This will allow the various Service pages to connect to the database.
+		Services.ServicePage.Initialize();
+
 		builder.Services.AddMauiBlazorWebView();
 
 #if DEBUG
