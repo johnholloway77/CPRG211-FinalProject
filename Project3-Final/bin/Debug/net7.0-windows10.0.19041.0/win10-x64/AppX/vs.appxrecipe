@@ -10,14 +10,14 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>9E242E11-6521-4144-A4AD-7AAFD2FFB67E</PackageIdentityName>
     <PackageIdentityPublisher>CN=User Name</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
+    <LayoutDir>C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
     <RegisteredManifestChecksum>73A4B0F31BB0D8877C9F668BA0657EAD75BB7037246736AC8C9C3AB105C6AD06</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>9E242E11-6521-4144-A4AD-7AAFD2FFB67E_1.0.0.1_x64__9zz4h110yvjzm</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>9E242E11-6521-4144-A4AD-7AAFD2FFB67E_9zz4h110yvjzm!App</RegisteredUserModeAppID>
@@ -26,28 +26,28 @@
     <RegisteredVersion>1.0.0.1</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-04-24T14:00:57.539</Modified>
+      <Modified>2023-04-24T20:31:42.777</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-04-24T13:10:53.953</Modified>
+      <Modified>2023-04-24T20:31:42.501</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Project3-Final.runtimeconfig.json">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Project3-Final.runtimeconfig.json">
       <PackagePath>Project3-Final.runtimeconfig.json</PackagePath>
-      <Modified>2023-04-24T07:13:37.504</Modified>
+      <Modified>2023-04-24T14:08:46.775</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Project3-Final.dll">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Project3-Final.dll">
       <PackagePath>Project3-Final.dll</PackagePath>
-      <Modified>2023-04-24T13:52:17.038</Modified>
+      <Modified>2023-04-24T20:31:41.949</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Project3-Final.exe</PackagePath>
-      <Modified>2023-04-24T13:52:17.046</Modified>
+      <Modified>2023-04-24T20:31:41.959</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\John\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.3\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1053,9 +1053,9 @@
       <PackagePath>krbcc64.dll</PackagePath>
       <Modified>2023-04-13T00:27:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Project3-Final.deps.json">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Project3-Final.deps.json">
       <PackagePath>Project3-Final.deps.json</PackagePath>
-      <Modified>2023-04-24T14:00:57.317</Modified>
+      <Modified>2023-04-24T20:31:42.675</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\7.0.59\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -1069,307 +1069,307 @@
       <PackagePath>Microsoft.Maui.pri</PackagePath>
       <Modified>2023-01-20T00:16:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\Resources\Raw\AboutAssets.txt">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
       <Modified>2023-04-20T02:10:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\Project3-Final.styles.css">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\Project3-Final.styles.css">
       <PackagePath>wwwroot\Project3-Final.styles.css</PackagePath>
       <Modified>2023-04-20T02:10:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\Project3-Final.bundle.scp.css">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\Project3-Final.bundle.scp.css">
       <PackagePath>wwwroot\Project3-Final.bundle.scp.css</PackagePath>
       <Modified>2023-04-20T02:10:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\wwwroot\css\app.css">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\wwwroot\css\app.css">
       <PackagePath>wwwroot\css\app.css</PackagePath>
       <Modified>2023-04-20T02:10:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\wwwroot\css\bootstrap\bootstrap.min.css">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\wwwroot\css\bootstrap\bootstrap.min.css">
       <PackagePath>wwwroot\css\bootstrap\bootstrap.min.css</PackagePath>
       <Modified>2023-04-20T02:10:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\wwwroot\css\bootstrap\bootstrap.min.css.map">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\wwwroot\css\bootstrap\bootstrap.min.css.map">
       <PackagePath>wwwroot\css\bootstrap\bootstrap.min.css.map</PackagePath>
       <Modified>2023-04-20T02:10:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\wwwroot\css\open-iconic\font\css\open-iconic-bootstrap.min.css">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\wwwroot\css\open-iconic\font\css\open-iconic-bootstrap.min.css">
       <PackagePath>wwwroot\css\open-iconic\font\css\open-iconic-bootstrap.min.css</PackagePath>
       <Modified>2023-04-20T02:10:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\wwwroot\css\open-iconic\font\fonts\open-iconic.eot">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\wwwroot\css\open-iconic\font\fonts\open-iconic.eot">
       <PackagePath>wwwroot\css\open-iconic\font\fonts\open-iconic.eot</PackagePath>
       <Modified>2023-04-20T02:10:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\wwwroot\css\open-iconic\font\fonts\open-iconic.otf">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\wwwroot\css\open-iconic\font\fonts\open-iconic.otf">
       <PackagePath>wwwroot\css\open-iconic\font\fonts\open-iconic.otf</PackagePath>
       <Modified>2023-04-20T02:10:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\wwwroot\css\open-iconic\font\fonts\open-iconic.svg">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\wwwroot\css\open-iconic\font\fonts\open-iconic.svg">
       <PackagePath>wwwroot\css\open-iconic\font\fonts\open-iconic.svg</PackagePath>
       <Modified>2023-04-20T02:10:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\wwwroot\css\open-iconic\font\fonts\open-iconic.ttf">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\wwwroot\css\open-iconic\font\fonts\open-iconic.ttf">
       <PackagePath>wwwroot\css\open-iconic\font\fonts\open-iconic.ttf</PackagePath>
       <Modified>2023-04-20T02:10:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\wwwroot\css\open-iconic\font\fonts\open-iconic.woff">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\wwwroot\css\open-iconic\font\fonts\open-iconic.woff">
       <PackagePath>wwwroot\css\open-iconic\font\fonts\open-iconic.woff</PackagePath>
       <Modified>2023-04-20T02:10:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\wwwroot\css\open-iconic\FONT-LICENSE">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\wwwroot\css\open-iconic\FONT-LICENSE">
       <PackagePath>wwwroot\css\open-iconic\FONT-LICENSE</PackagePath>
       <Modified>2023-04-20T02:10:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\wwwroot\css\open-iconic\ICON-LICENSE">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\wwwroot\css\open-iconic\ICON-LICENSE">
       <PackagePath>wwwroot\css\open-iconic\ICON-LICENSE</PackagePath>
       <Modified>2023-04-20T02:10:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\wwwroot\css\open-iconic\README.md">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\wwwroot\css\open-iconic\README.md">
       <PackagePath>wwwroot\css\open-iconic\README.md</PackagePath>
       <Modified>2023-04-20T02:10:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\wwwroot\favicon.ico">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\wwwroot\favicon.ico">
       <PackagePath>wwwroot\favicon.ico</PackagePath>
       <Modified>2023-04-20T02:10:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\wwwroot\index.html">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\wwwroot\index.html">
       <PackagePath>wwwroot\index.html</PackagePath>
       <Modified>2023-04-20T02:10:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
       <Modified>2023-04-24T04:38:01.458</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
       <Modified>2023-04-24T04:38:01.476</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
       <Modified>2023-04-24T04:38:01.499</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
       <Modified>2023-04-24T04:38:01.536</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
       <Modified>2023-04-24T04:38:01.668</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
       <Modified>2023-04-20T02:10:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
       <Modified>2023-04-24T04:38:01.695</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
       <Modified>2023-04-24T04:38:01.941</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
       <Modified>2023-04-24T04:38:01.958</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
       <Modified>2023-04-24T04:38:01.973</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
       <Modified>2023-04-24T04:38:01.992</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
       <Modified>2023-04-24T04:38:02.093</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
       <Modified>2023-04-24T04:38:01.793</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
       <Modified>2023-04-24T04:38:01.800</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
       <Modified>2023-04-24T04:38:01.818</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
       <Modified>2023-04-24T04:38:01.807</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
       <Modified>2023-04-24T04:38:01.811</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
       <Modified>2023-04-24T04:38:01.748</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
       <Modified>2023-04-24T04:38:01.752</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
       <Modified>2023-04-24T04:38:01.778</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
       <Modified>2023-04-24T04:38:01.759</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
       <Modified>2023-04-24T04:38:01.767</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
       <Modified>2023-04-24T04:38:01.704</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
       <Modified>2023-04-24T04:38:01.706</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
       <Modified>2023-04-24T04:38:01.710</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
       <Modified>2023-04-24T04:38:01.712</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
       <Modified>2023-04-24T04:38:01.717</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
       <Modified>2023-04-24T04:38:01.722</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
       <Modified>2023-04-24T04:38:01.725</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
       <Modified>2023-04-24T04:38:01.745</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
       <Modified>2023-04-24T04:38:01.731</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
       <Modified>2023-04-24T04:38:01.736</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
       <Modified>2023-04-24T04:38:01.852</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
       <Modified>2023-04-24T04:38:01.856</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
       <Modified>2023-04-24T04:38:01.860</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
       <Modified>2023-04-24T04:38:01.867</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
       <Modified>2023-04-24T04:38:01.880</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
       <Modified>2023-04-24T04:38:01.834</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
       <Modified>2023-04-24T04:38:01.837</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
       <Modified>2023-04-24T04:38:01.840</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
       <Modified>2023-04-24T04:38:01.843</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
       <Modified>2023-04-24T04:38:01.849</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
       <Modified>2023-04-24T04:38:01.820</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
       <Modified>2023-04-24T04:38:01.823</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
       <Modified>2023-04-24T04:38:01.826</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
       <Modified>2023-04-24T04:38:01.828</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
       <Modified>2023-04-24T04:38:01.832</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
       <Modified>2023-04-24T04:38:01.884</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
       <Modified>2023-04-24T04:38:01.889</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
       <Modified>2023-04-24T04:38:01.895</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
       <Modified>2023-04-24T04:38:01.905</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
       <Modified>2023-04-24T04:38:01.934</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
       <Modified>2023-04-24T04:38:01.696</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
       <Modified>2023-04-24T04:38:01.704</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
       <Modified>2023-04-24T04:38:01.716</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
       <Modified>2023-04-24T04:38:01.741</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
       <Modified>2023-04-24T04:38:01.811</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\Shared\MainLayout.razor.css">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\Shared\MainLayout.razor.css">
       <PackagePath>Shared\MainLayout.razor.css</PackagePath>
       <Modified>2023-04-20T02:10:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\John\Downloads\Victor\Project3- Version 6pm - 19 April\Project3-Final\Shared\NavMenu.razor.css">
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\Shared\NavMenu.razor.css">
       <PackagePath>Shared\NavMenu.razor.css</PackagePath>
       <Modified>2023-04-20T02:10:24.000</Modified>
     </AppxPackagedFile>
