@@ -7,7 +7,7 @@
 
 
 <body>
-<h3>EditCustomer</h3>
+<h3>Edit Customer</h3>
 
 
          <table class="table">
@@ -38,7 +38,7 @@
         </tr>
         <tr>
             <td>Birthday</td>
-                <td><input type="date" @bind="@customerToEdit.DateOfBirth"/></td>
+                <td><InputDate @bind-Value="@customerToEdit.DateOfBirth" /></td>
         </tr>
         <tr>
             <td>Membership Type</td>
@@ -59,8 +59,9 @@
                 </InputSelect>
                 </td>
         </tr>
-
-            <btn class="btn btn-primary" @onclick="dataValidation">Update</btn>
+            <br />
+            <btn class="btn btn-primary" @onclick="dataValidation">Update</btn>&nbsp&nbsp&nbsp
+            <btn class="btn btn-primary" @onclick="() => Cancle()">Cancle</btn>
 
     </tbody>
         </table>
@@ -72,7 +73,7 @@
 
 
     //validate that fields are entered to update customer.
-    void dataValidation()
+    internal void dataValidation()
     {
         bool validCustomer = true;
         long x;
@@ -120,13 +121,19 @@
         }
     }
 
-    void updateCustomer()
+    internal void updateCustomer()
     {        
 
         Services.CustomerServices.UpdateRecord(customerToEdit.CustID, customerToEdit.FirstName, customerToEdit.LastName, customerToEdit.PhoneNumber, customerToEdit.Email, customerToEdit.DateOfBirth, customerToEdit.MembershipType, customerToEdit.AccountStatus);
 
-        Application.Current.MainPage.DisplayAlert("Note:", $"UpdateRecord() request sent for {customerToEdit.FirstName} {customerToEdit.LastName}", "Okay");
+        Application.Current.MainPage.DisplayAlert("Note:", $"Customer record updated for {customerToEdit.FirstName} {customerToEdit.LastName}", "Okay");
 
+        navHelper.NavigateTo("customer");
+    }
+
+    internal void Cancle()
+    {
+        Services.CustomerServices.LoadFromDatabase();
         navHelper.NavigateTo("customer");
     }
 }

@@ -54,10 +54,12 @@ namespace Project3_Final.Services
 
         }
 
-        public static void AddToDatabase(int custID, string firstName, string lastName, string phoneNumber, string email, string dateOfBirth, string membershipType, bool accountStatus)
+        public static void AddToDatabase(int custID, string firstName, string lastName, string phoneNumber, string email, DateTime dateOfBirth, string membershipType, bool accountStatus)
         {
-            string query = $"INSERT INTO customers (custID, firstName, lastName, phoneNumber, email, dateOfBirth, membershipType, accountStatus) VALUES ({custID}, {firstName}, {lastName}, {phoneNumber}, {email}, STR_TO_DATE('{dateOfBirth}', '%Y-%m-%d'), {membershipType}, {accountStatus})";
+            string query = $"INSERT INTO customers (custID, firstName, lastName, phoneNumber, email, dateOfBirth, membershipType, accountStatus) VALUES ({custID}, '{firstName}', '{lastName}', '{phoneNumber}', '{email}', STR_TO_DATE('{dateOfBirth.ToString("yyyy-MM-dd")}','%Y-%m-%d'), '{membershipType}', {accountStatus})";
 
+
+            Debug.WriteLine(query);
 
             if (OpenConnection() == true)
             {
