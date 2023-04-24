@@ -27,7 +27,7 @@
                <tr>
                 <td>@customer.FirstName</td>
                 <td>@customer.LastName</td>
-                <td>@customer.PhoneNumber</td>
+                <td>@String.Format("{0:(###) ###-####}", long.Parse(customer.PhoneNumber))</td>
                 <td>@customer.Email</td>
                 <td>@customer.DateOfBirth.ToString("yyyy-MM-dd")</td>
                 <td>@customer.MembershipType</td>
