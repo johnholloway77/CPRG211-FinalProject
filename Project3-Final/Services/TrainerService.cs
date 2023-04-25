@@ -9,11 +9,11 @@ using System.Diagnostics;
 
 namespace Project3_Final.Services
 {
-    public class TrainerServices : ServicePage, ImySqlConnectable
+    public class TrainerServices : ServicePage //, ImySqlConnectable
     {
-        List<Trainer> trainers = new List<Trainer>();
+        public static List<Trainer> trainers = new List<Trainer>();
 
-        public void LoadFromDatabase()
+        public static void LoadFromDatabase()
         {
             trainers.Clear();
             string query = "SELECT * FROM trainers";
@@ -39,7 +39,7 @@ namespace Project3_Final.Services
             }
         }
 
-        public void AddToDatabase(int trainerId, string firstName, string lastName, string phoneNumber, string email, int baseSalary, int hourlyFee, string certification)
+        public static void AddToDatabase(int trainerId, string firstName, string lastName, string phoneNumber, string email, int baseSalary, int hourlyFee, string certification)
         {
             string query = $"INSERT INTO trainers (trainerId, firstName, lastName, phoneNumber, email, baseSalary, hourlyFee, certification) VALUES ({trainerId}, '{firstName}', '{lastName}', '{phoneNumber}', '{email}', {baseSalary}, {hourlyFee}, '{certification}')";
 
@@ -51,7 +51,7 @@ namespace Project3_Final.Services
             }
         }
 
-        public void UpdateRecord(int trainerId, string firstName, string lastName, string phoneNumber, string email, int baseSalary, int hourlyFee, string certification)
+        public static void UpdateRecord(int trainerId, string firstName, string lastName, string phoneNumber, string email, int baseSalary, int hourlyFee, string certification)
         {
             string query = $"UPDATE trainers SET firstName='{firstName}', lastName='{lastName}', phoneNumber='{phoneNumber}', email='{email}', baseSalary={baseSalary}, hourlyFee={hourlyFee}, certification='{certification}' WHERE trainerId={trainerId}";
 

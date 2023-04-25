@@ -1,0 +1,118 @@
+﻿@page "/newGym"
+@using Project3_Final.Services;
+@using Project3_Final.Models;
+@using Microsoft.AspNetCore.Components.Forms
+
+@inject NavigationManager navHelper
+
+<h3>Add New Gym</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Field</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Street Address</td>
+            <td><input type="text" @bind="@street" /></td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td><input type="text" @bind="city" /></td>
+        </tr>
+        <tr>
+            <td>Province</td>
+            <td>
+                <InputSelect @bind-Value="@province">
+                    <option value="Alberta">Alberta</option>
+                    <option value="British Columbia">British Columbia</option>
+                    <option value="Manitoba">Manitoba</option>
+                    <option value="New Brunswick">New Brunswick</option>
+                    <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                    <option value="Northwest Territories">Northwest Territories</option>
+                    <option value="Nova Scotia">Nova Scotia</option>
+                    <option value="Nunavut">Nunavut</option>
+                    <option value="Ontario">Ontario</option>
+                    <option value="Prince Edward Island">Prince Edward Island</option>
+                    <option value="Quebec">Quebec</option>
+                    <option value="Saskatchewan">Saskatchewan</option>
+                    <option value="Yukon">Yukon</option>
+                </InputSelect>
+            </td>
+        </tr>
+        <tr>
+            <td>Postal Code</td>
+            <td><input type="text" @bind="postal" /></td>
+        </tr>
+    </tbody>
+</table>
+
+<br />
+<btn class="btn btn-primary" @onclick="dataValidation">Update</btn>&nbsp&nbsp&nbsp
+<btn class="btn btn-primary" @onclick="() => Cancle()">Cancle</btn>
+
+
+
+
+@code {
+    private int gymID = Services.GymService.gyms.Count + 1;
+    private string street;
+    private string city;
+    private string province = "Alberta";
+    private string postal;
+
+    //validate that fields are entered to update gym.
+    internal void dataValidation()
+    {
+        bool validGym = true;
+        string alertMessage = "";
+
+        if (string.IsNullOrWhiteSpace(street))
+        {
+            validGym = false;
+            alertMessage += "Street Address Required";
+        }
+        if (string.IsNullOrWhiteSpace(city))
+        {
+            validGym = false;
+            alertMessage += "\nCity Required";
+        }
+        if (string.IsNullOrWhiteSpace(province))
+        {
+            validGym = false;
+            alertMessage += "\nProvince required.";
+        }
+        if (string.IsNullOrWhiteSpace(postal))
+        {
+            validGym = false;
+            alertMessage += "\nPostal Code required.";
+        }
+
+        if (validGym)
+        {
+            createGym();
+        }
+        else
+        {
+            Application.Current.MainPage.DisplayAlert("Error, cannot add gym", alertMessage, "Okay");
+        }
+    }
+
+    internal void createGym()
+    {
+        Services.GymService.AddToDatabase(gymID, street, city, province, postal);
+
+        navHelper.NavigateTo("gym");
+    }
+
+    internal void Cancle()
+    {
+        Services.GymService.LoadFromDatabase();
+        navHelper.NavigateTo("gym");
+    }
+
+}
+

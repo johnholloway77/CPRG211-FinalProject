@@ -14,15 +14,15 @@ using System.Threading.Tasks;
 
 namespace Project3_Final.Services
 {
-    public class GymService : ServicePage, ImySqlConnectable
+    public class GymService : ServicePage //, ImySqlConnectable
     {
-        List<Gym> gyms = new List<Gym>();
+        public static List<Gym> gyms = new List<Gym>();
 
-        public void LoadFromDatabase()
+        public static void LoadFromDatabase()
         {
             gyms.Clear();
 
-            string query = "SELECT * FROM gyms";
+            string query = "SELECT * FROM gym";
 
             if (OpenConnection() == true)
             {
@@ -32,9 +32,9 @@ namespace Project3_Final.Services
 
                 while (dataReader.Read())
                 {
-                    Gym gym = new Gym((int)dataReader["gymID"], (string)dataReader["street"], (string)dataReader["city"], (string)dataReader["province"], (string)dataReader["postal"]);
+                    Gym _ = new Gym((int)dataReader["gymID"], (string)dataReader["street"], (string)dataReader["city"], (string)dataReader["prov"], (string)dataReader["postalCode"]);
 
-                    gyms.Add(gym);
+                    gyms.Add(_);
                 }
 
                 dataReader.Close();
@@ -47,9 +47,9 @@ namespace Project3_Final.Services
             }
         }
 
-        public void AddToDatabase(int gymID, string street, string city, string province, string postal)
+        public static void AddToDatabase(int gymID, string street, string city, string province, string postal)
         {
-            string query = $"INSERT INTO gyms (gymID, street, city, province, postal) VALUES ({gymID}, '{street}', '{city}', '{province}', '{postal}')";
+            string query = $"INSERT INTO gym (gymID, street, city, prov, postalCode) VALUES ({gymID}, '{street}', '{city}', '{province}', '{postal}')";
 
             if (OpenConnection() == true)
             {
@@ -61,9 +61,9 @@ namespace Project3_Final.Services
             }
         }
 
-        public void UpdateRecord(int gymID, string street, string city, string province, string postal)
+        public static void UpdateRecord(int gymID, string street, string city, string province, string postal)
         {
-            string query = $"UPDATE gyms SET street='{street}', city='{city}', province='{province}', postal='{postal}' WHERE gymID='{gymID}'";
+            string query = $"UPDATE gym SET street='{street}', city='{city}', prov='{province}', postalCode='{postal}' WHERE gymID='{gymID}'";
 
             if (OpenConnection() == true)
             {

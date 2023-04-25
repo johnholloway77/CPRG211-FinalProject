@@ -1,0 +1,112 @@
+﻿@page "/editGym"
+@using Project3_Final.Services;
+@using Project3_Final.Models;
+@using Microsoft.AspNetCore.Components.Forms
+
+@inject NavigationManager navHelper
+<h3>EditGym</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Field</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Street Address</td>
+            <td><input type="text" @bind="@gymToEdit.Street"/></td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td><input type="text" @bind="gymToEdit.City"/></td>
+        </tr>
+        <tr>
+            <td>Province</td>
+            <td><InputSelect @bind-Value="@gymToEdit.Province">
+                    <option value="Alberta">Alberta</option>
+                    <option value="British Columbia">British Columbia</option>
+                    <option value="Manitoba">Manitoba</option>
+                    <option value="New Brunswick">New Brunswick</option>
+                    <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                    <option value="Northwest Territories">Northwest Territories</option>
+                    <option value="Nova Scotia">Nova Scotia</option>
+                    <option value="Nunavut">Nunavut</option>
+                    <option value="Ontario">Ontario</option>
+                    <option value="Prince Edward Island">Prince Edward Island</option>
+                    <option value="Quebec">Quebec</option>
+                    <option value="Saskatchewan">Saskatchewan</option>
+                    <option value="Yukon">Yukon</option>
+                </InputSelect>
+            </td>
+        </tr>
+        <tr>
+            <td>Postal Code</td>
+            <td><input type="text" @bind="gymToEdit.Postal" /></td>
+        </tr>
+    </tbody>
+</table>
+        
+<br />
+<btn class="btn btn-primary" @onclick="dataValidation">Update</btn>&nbsp&nbsp&nbsp
+<btn class="btn btn-primary" @onclick="() => Cancle()">Cancle</btn>
+
+
+
+
+@code {
+    internal static Gym? gymToEdit;
+
+    //validate that fields are entered to update gym.
+    internal void dataValidation()
+    {
+        bool validGym = true;
+        string alertMessage = "";
+
+        if (string.IsNullOrWhiteSpace(gymToEdit.Street))
+        {
+            validGym = false;
+            alertMessage += "Street Address Required";
+        }
+        if (string.IsNullOrWhiteSpace(gymToEdit.City))
+        {
+            validGym = false;
+            alertMessage += "\nCity Required";
+        }
+        if (string.IsNullOrWhiteSpace(gymToEdit.Province))
+        {
+            validGym = false;
+            alertMessage += "\nProvince required.";
+        }
+        if (string.IsNullOrWhiteSpace(gymToEdit.Postal))
+        {
+            validGym = false;
+            alertMessage += "\nPostal Code required.";
+        }
+
+        if (validGym)
+        {
+            updateGym();
+        }
+        else
+        {
+            Application.Current.MainPage.DisplayAlert("Error, cannot update gym", alertMessage, "Okay");
+        }
+    }
+
+    internal void updateGym()
+    {
+        Services.GymService.UpdateRecord(gymToEdit.GymID, gymToEdit.Street, gymToEdit.City, gymToEdit.Province, gymToEdit.Postal);
+        Application.Current.MainPage.DisplayAlert("Note:", $"Record updated for {gymToEdit.Street} {gymToEdit.City}", "Okay");
+
+        navHelper.NavigateTo("gym");
+    }
+
+    internal void Cancle()
+    {
+        Services.GymService.LoadFromDatabase();
+        navHelper.NavigateTo("gym");
+    }
+
+}

@@ -16,8 +16,11 @@ public static class MauiProgram
 			});
 
 		//Initialize the connection on ServicePage
+
 		//This will allow the various Service pages to connect to the database.
 		Services.ServicePage.Initialize();
+
+
 
 		builder.Services.AddMauiBlazorWebView();
 

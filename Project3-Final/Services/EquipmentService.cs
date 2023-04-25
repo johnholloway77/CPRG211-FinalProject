@@ -5,11 +5,11 @@ using System.Diagnostics;
 
 namespace Project3_Final.Services
 {
-    public class EquipmentServices : ServicePage, ImySqlConnectable
+    public class EquipmentServices : ServicePage //, ImySqlConnectable
     {
-        List<Equipment> equipments = new List<Equipment>();
+        public static List<Equipment> equipments = new List<Equipment>();
 
-        public void LoadFromDatabase()
+        public static void LoadFromDatabase()
         {
             equipments.Clear();
             string query = "SELECT * FROM equipment";
@@ -35,7 +35,7 @@ namespace Project3_Final.Services
             }
         }
 
-        public void AddToDatabase(int equipmentId, int gymID, string equipmenttype, byte weightLBS)
+        public static void AddToDatabase(int equipmentId, int gymID, string equipmenttype, byte weightLBS)
         {
             string query = $"INSERT INTO equipment (equipmentId, gymID, equipmenttype, weightLBS) VALUES ({equipmentId}, {gymID}, '{equipmenttype}', {weightLBS})";
 
@@ -47,7 +47,7 @@ namespace Project3_Final.Services
             }
         }
 
-        public void UpdateRecord(int equipmentId, int gymID, string equipmenttype, byte weightLBS)
+        public static void UpdateRecord(int equipmentId, int gymID, string equipmenttype, byte weightLBS)
         {
             string query = $"UPDATE equipment SET gymID={gymID}, equipmenttype='{equipmenttype}', weightLBS={weightLBS} WHERE equipmentId={equipmentId}";
 

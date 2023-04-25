@@ -1,4 +1,6 @@
-﻿using System;
+﻿//This interface will be removed. It is not useful nor practical. 
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

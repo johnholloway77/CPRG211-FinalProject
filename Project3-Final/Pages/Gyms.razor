@@ -1,0 +1,50 @@
+﻿@page "/gym"
+
+@using Project3_Final.Services;
+@using Project3_Final.Models;
+
+@inject NavigationManager navHelper
+
+<h1>Gym Information</h1>
+
+<btn class="btn btn-primary" @onclick="() => NewGym()">New Gym</btn>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Adderss</th>
+            <th>City</th>
+            <th>Province</th>
+            <th>Postal Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Gym gym in Services.GymService.gyms)
+        {
+            <tr>
+                <td>@gym.Street</td>
+                <td>@gym.City</td>
+                <td>@gym.Province</td>
+                <td>@gym.Postal</td>
+                <button class="btn-outline-primary" @onclick="() => LoadEditPage(gym)">Edit</button>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+
+@code {
+
+
+    internal void LoadEditPage(Gym gymToEdit)
+    {
+        EditGym.gymToEdit = gymToEdit;
+        navHelper.NavigateTo("editGym");
+    }
+
+    internal void NewGym()
+    {
+        navHelper.NavigateTo("newGym");
+    }
+}

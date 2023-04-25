@@ -11,11 +11,11 @@ using System.Diagnostics;
 
 namespace Project3_Final.Services
 {
-    public class StaffServices : ServicePage, ImySqlConnectable
+    public class StaffServices : ServicePage //, ImySqlConnectable
     {
-        List<Staff> staffs = new List<Staff>();
+        public static List<Staff> staffs = new List<Staff>();
 
-        public void LoadFromDatabase()
+        public static void LoadFromDatabase()
         {
             staffs.Clear();
             string query = "SELECT * FROM staff";
@@ -41,7 +41,7 @@ namespace Project3_Final.Services
             }
         }
 
-        public void AddToDatabase(int staffID, string firstName, string lastName, string phoneNumber, string email, int salary, string postion)
+        public static void AddToDatabase(int staffID, string firstName, string lastName, string phoneNumber, string email, int salary, string postion)
         {
             string query = $"INSERT INTO staff (staffID, firstName, lastName, phoneNumber, email, salary, postion) VALUES ({staffID}, '{firstName}', '{lastName}', '{phoneNumber}', '{email}', {salary}, '{postion}')";
 
@@ -53,7 +53,7 @@ namespace Project3_Final.Services
             }
         }
 
-        public void UpdateRecord(int staffID, string firstName, string lastName, string phoneNumber, string email, int salary, string postion)
+        public static void UpdateRecord(int staffID, string firstName, string lastName, string phoneNumber, string email, int salary, string postion)
         {
             string query = $"UPDATE staff SET firstName='{firstName}', lastName='{lastName}', phoneNumber='{phoneNumber}', email='{email}', salary={salary}, postion='{postion}' WHERE staffID={staffID}";
 
