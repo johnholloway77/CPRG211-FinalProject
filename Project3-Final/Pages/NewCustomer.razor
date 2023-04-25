@@ -61,7 +61,7 @@
         </tr>
 
         <br />
-        <btn class="btn btn-primary" @onclick="dataValidation">Update</btn>
+        <btn class="btn btn-primary" @onclick="dataValidation">Create</btn>
         &nbsp&nbsp&nbsp
         <btn class="btn btn-primary" @onclick="() => Cancle()">Cancle</btn>
 
@@ -128,7 +128,7 @@
         }
         else
         {
-            Application.Current.MainPage.DisplayAlert("Error, cannot update customer", alertMessage, "Okay");
+            Application.Current.MainPage.DisplayAlert("Error, cannot create customer", alertMessage, "Okay");
         }
     }
 
