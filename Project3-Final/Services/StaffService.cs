@@ -27,7 +27,7 @@ namespace Project3_Final.Services
 
                 while (dataReader.Read())
                 {
-                    Staff _ = new Staff((int)dataReader["staffID"], (string)dataReader["firstName"], (string)dataReader["lastName"], (string)dataReader["phoneNumber"], (string)dataReader["email"], (int)dataReader["salary"], (string)dataReader["postion"]);
+                    Staff _ = new Staff((int)dataReader["staffID"], (int)dataReader["gymID"], (string)dataReader["firstName"], (string)dataReader["lastName"], (string)dataReader["phoneNumber"], (string)dataReader["email"], (int)dataReader["salary"], (string)dataReader["position"], (bool)dataReader["employmentStatus"]);
 
                     staffs.Add(_);
                 }
@@ -41,9 +41,9 @@ namespace Project3_Final.Services
             }
         }
 
-        public static void AddToDatabase(int staffID, string firstName, string lastName, string phoneNumber, string email, int salary, string postion)
+        public static void AddToDatabase(int staffID, int gymID, string firstName, string lastName, string phoneNumber, string email, int salary, string position, bool accountStatus)
         {
-            string query = $"INSERT INTO staff (staffID, firstName, lastName, phoneNumber, email, salary, postion) VALUES ({staffID}, '{firstName}', '{lastName}', '{phoneNumber}', '{email}', {salary}, '{postion}')";
+            string query = $"INSERT INTO staff (staffID, gymID, firstName, lastName, phoneNumber, email, salary, position, employmentStatus) VALUES ({staffID}, {gymID}, '{firstName}', '{lastName}', '{phoneNumber}', '{email}', {salary}, '{position}', {accountStatus})";
 
             if (OpenConnection() == true)
             {
@@ -53,9 +53,9 @@ namespace Project3_Final.Services
             }
         }
 
-        public static void UpdateRecord(int staffID, string firstName, string lastName, string phoneNumber, string email, int salary, string postion)
+        public static void UpdateRecord(int staffID, int gymID, string firstName, string lastName, string phoneNumber, string email, int salary, string position, bool accountStatus)
         {
-            string query = $"UPDATE staff SET firstName='{firstName}', lastName='{lastName}', phoneNumber='{phoneNumber}', email='{email}', salary={salary}, postion='{postion}' WHERE staffID={staffID}";
+            string query = $"UPDATE staff SET gymID={gymID}, firstName='{firstName}', lastName='{lastName}', phoneNumber='{phoneNumber}', email='{email}', salary={salary}, position='{position}', employmentStatus={accountStatus} WHERE staffID={staffID}";
 
             if (OpenConnection() == true)
             {

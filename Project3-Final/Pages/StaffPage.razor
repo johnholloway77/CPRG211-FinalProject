@@ -1,0 +1,66 @@
+﻿@page "/staff"
+
+@using Project3_Final.Services;
+@using Project3_Final.Models;
+
+@inject NavigationManager navHelper
+
+<h1>Staff Members</h1>
+
+<btn class="btn btn-primary" @onclick="() => NewStaff()">New Staff Member</btn>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Phone number</th>
+            <th>Email</th>
+            <th>Salary</th>
+            <th>Gym Location</th>
+            <th>Position</th>
+            <th>Employment Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Staff staff in StaffServices.staffs)
+        {
+
+            <tr>
+                <td>@staff.FirstName</td>
+                <td>@staff.LastName</td>
+                <td>@String.Format("{0:(###) ###-####}", long.Parse(staff.PhoneNumber))</td>
+                <td>@staff.Email</td>
+                <td>@String.Format("{0:C}", staff.Salary)</td>
+                <td>@gymLocation(staff.GymID)</td>
+                <td>@staff.Position</td>
+                <td>@staff.AccountStatus</td>
+                <button class="btn-outline-primary" @onclick="() => LoadEditPage(staff)">Edit</button>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+
+
+@code {
+
+    internal void LoadEditPage(Staff staffToEdit)
+    {
+        EditStaff.staffToEdit = staffToEdit;
+        navHelper.NavigateTo("editstaff");
+    }
+
+    internal void NewStaff()
+    {
+        navHelper.NavigateTo("newstaff");
+    }
+
+    internal string gymLocation(int gymID)
+    {
+        return Services.GymService.gymDictionary[gymID];
+    }
+
+}

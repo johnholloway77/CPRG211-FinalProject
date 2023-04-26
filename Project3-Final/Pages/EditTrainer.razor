@@ -1,0 +1,153 @@
+﻿@page "/edittrainer"
+
+@using Project3_Final.Services;
+@using Project3_Final.Models;
+
+
+@inject NavigationManager navHelper
+
+<h3>Edit Personal Trainer</h3>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Field</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>Trainer ID</td>
+            <td>@trainerToEdit.TrainerId</td>
+        </tr>
+        <tr>
+            <td>First name</td>
+            <td><input type="text" @bind="@trainerToEdit.FirstName" /></td>
+
+        </tr>
+        <tr>
+            <td>Last name</td>
+            <td><input type="text" @bind="@trainerToEdit.LastName" /></td>
+        </tr>
+        <tr>
+            <td>Phone Number</td>
+            <td><input type="tel" @bind="@trainerToEdit.PhoneNumber" maxlength="10" /></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" @bind="@trainerToEdit.Email" /></td>
+        </tr>
+        <tr>
+            <td>Base Salary</td>
+            <td><InputNumber @bind-Value="@trainerToEdit.BaseSalary" /></td>
+        </tr>
+        <tr>
+            <td>Hourly Fee</td>
+            <td><InputNumber @bind-Value="@trainerToEdit.HourlyFee" /></td>
+        </tr>
+        <tr>
+            <td>Certification</td>
+            <td><InputText @bind-Value="@trainerToEdit.Certification" /></td>
+        </tr>
+
+        <tr>
+            <td>Employment Status</td>
+            <td>
+                <InputSelect @bind-Value="@trainerToEdit.AccountStatus">
+                    <option value=true>Active</option>
+                    <option value=false>Inactive</option>
+                </InputSelect>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<br />
+<btn class="btn btn-primary" @onclick="dataValidation">Update</btn>&nbsp&nbsp&nbsp
+<btn class="btn btn-primary" @onclick="() => Cancle()">Cancle</btn>
+
+
+
+
+@code {
+    internal static Trainer trainerToEdit;
+
+
+    //validate that fields are entered to update Personal Trainer.
+    internal void dataValidation()
+    {
+        bool validStaff = true;
+        long x;
+        int y;
+        string alertMessage = "";
+
+        if (string.IsNullOrWhiteSpace(trainerToEdit.FirstName))
+        {
+            validStaff = false;
+            alertMessage += "Firstname Required";
+        }
+        if (string.IsNullOrWhiteSpace(trainerToEdit.LastName))
+        {
+            validStaff = false;
+            alertMessage += "\nLastname Required";
+        }
+        if (string.IsNullOrWhiteSpace(trainerToEdit.PhoneNumber))
+        {
+            validStaff = false;
+            alertMessage += "\nPhone number required.";
+        }
+        if (trainerToEdit.PhoneNumber.Length < 10)
+        {
+            validStaff = false;
+            alertMessage += "\nPhone number must contain 10 digits";
+        }
+        if (!long.TryParse(trainerToEdit.PhoneNumber, out x))
+        {
+            validStaff = false;
+            alertMessage += "\nPhone number can only contain numerical values";
+        }
+        if (string.IsNullOrWhiteSpace(trainerToEdit.Email))
+        {
+            validStaff = false;
+            alertMessage += "\nEmail address required.";
+        }
+        if (trainerToEdit.BaseSalary == null)
+        {
+            validStaff = false;
+            alertMessage += "\nSalary required.";
+        }
+        if (string.IsNullOrWhiteSpace(trainerToEdit.Certification))
+        {
+            validStaff = false;
+            alertMessage += "\nCertification(s) required.";
+        }
+        if (validStaff)
+        {
+            updateTrainer();
+        }
+        else
+        {
+            Application.Current.MainPage.DisplayAlert("Error, cannot update Personal Trainer", alertMessage, "Okay");
+        }
+    }
+
+    internal void updateTrainer()
+    {
+
+        Services.TrainerServices.UpdateRecord(trainerToEdit.TrainerId, trainerToEdit.FirstName, trainerToEdit.LastName, trainerToEdit.PhoneNumber, trainerToEdit.Email, trainerToEdit.BaseSalary, trainerToEdit.HourlyFee, trainerToEdit.Certification, trainerToEdit.AccountStatus);
+
+        Application.Current.MainPage.DisplayAlert("Note:", $"Trainer record updated for {trainerToEdit.FirstName} {trainerToEdit.LastName}", "Okay");
+
+        Services.TrainerServices.LoadFromDatabase();
+        navHelper.NavigateTo("trainer");
+    }
+
+
+    internal void Cancle()
+    {
+        Services.TrainerServices.LoadFromDatabase();
+        navHelper.NavigateTo("trainer");
+    }
+}

@@ -13,8 +13,10 @@ namespace Project3_Final.Services
     public class CustomerServices : ServicePage //, ImySqlConnectable
     {
         //Initialize List<Customers> which will store the Customer Objects to be manipulated.
-
         public static List<Customer> customers = new List<Customer>();
+
+        //Initialize customerDictionary. Dictionary will input custID and return first & last name
+        public static Dictionary<int, string> customerDictionary = new Dictionary<int, string>();
 
         public static void LoadFromDatabase()
         {
@@ -38,8 +40,11 @@ namespace Project3_Final.Services
                 {
                     Customer _ = new Customer((int)dataReader["custID"], (string)dataReader["firstName"], (string)dataReader["lastName"], (string)dataReader["phoneNumber"], (string)dataReader["email"], (DateTime)dataReader["dateOfBirth"], (string)dataReader["membershipType"], (bool)dataReader["accountStatus"]);
 
+                    //add to list<Customers> customers
                     customers.Add(_);
-
+                    
+                    //add object instance to trainerDictionary
+                    AddToCustomerDictionary(_.CustID, _.FirstName, _.LastName);
                 }
 
                 dataReader.Close();
@@ -97,7 +102,12 @@ namespace Project3_Final.Services
             }
         }
 
-       
+        private static void AddToCustomerDictionary(int custID, string firstName, string lastName)
+        {
+            customerDictionary[custID] = $"{firstName} {lastName}";
+
+
+        }
 
 
     }

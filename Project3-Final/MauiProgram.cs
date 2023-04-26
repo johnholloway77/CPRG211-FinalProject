@@ -16,11 +16,15 @@ public static class MauiProgram
 			});
 
 		//Initialize the connection on ServicePage
-
 		//This will allow the various Service pages to connect to the database.
 		Services.ServicePage.Initialize();
-
-
+		//Load databases and initialize various lists for service pages
+		Services.CustomerServices.LoadFromDatabase();
+		Services.GymService.LoadFromDatabase();
+		Services.StaffServices.LoadFromDatabase();
+		Services.TrainerServices.LoadFromDatabase();
+		//Services.EquipmentServices.LoadFromDatabase();
+		Services.SessionService.LoadFromDatabase();
 
 		builder.Services.AddMauiBlazorWebView();
 

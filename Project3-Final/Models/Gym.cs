@@ -13,6 +13,7 @@ namespace Project3_Final.Models
 		private string city;
 		private string province;
 		private string postal;
+		private string location;
 
 		public Gym(int gymID, string street, string city, string province, string postal)
 		{
@@ -21,6 +22,7 @@ namespace Project3_Final.Models
 			this.city = city;
 			this.province = province;
 			this.postal = postal;
+			//this.location = $"{street}\n{city}";
 		}
 
 		public int GymID { get => gymID; set => gymID = value; }
@@ -28,8 +30,9 @@ namespace Project3_Final.Models
 		public string City { get => city; set => city = value; }
 		public string Province { get => province; set => province = value; }
 		public string Postal { get => postal; set => postal = value; }
+        public string Location { get => location; set => location = value; }
 
-		public override string ToString()
+        public override string ToString()
 		{
 			return $"{GymID}" + base.ToString() + $"{Street}:{City}:{Province}:{Postal}";
 		}

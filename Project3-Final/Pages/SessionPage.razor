@@ -1,0 +1,63 @@
+﻿@page "/session"
+
+@using Project3_Final.Services;
+@using Project3_Final.Models;
+
+@inject NavigationManager navHelper
+
+<h1>Personal Training Sessions</h1>
+
+<btn class="btn btn-primary">New Training Session</btn>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Personal Trainer</th>
+            <th>Customer Name</th>
+            <th>Gym Location</th>
+            <th>Session Date</th>
+            <th>Session Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Session session in SessionService.sessions)
+        {
+            <tr>
+                <td>@personalTrainer(session.TrainerID)</td>
+                <td>@customerName(session.CustID)</td>
+                <td>@gymLocation(session.GymID)</td>
+                <td>@session.SessionDate</td>
+                <td>@session.SessionStatus</td>
+                <td><btn class="btn btn-primary" @onclick="() => editSession(session)">Edit</btn></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+
+@code {
+
+    private void editSession(Session sessionToEdit)
+    {
+        navHelper.NavigateTo("editsession");
+        EditSession.sessionToEdit = sessionToEdit;
+    }
+
+    private string personalTrainer(int trainerID)
+    {
+        return Services.TrainerServices.trainerDictionary[trainerID];
+    }
+
+    private string customerName(int custID)
+    {
+        return Services.CustomerServices.customerDictionary[custID];
+    }
+
+    private string gymLocation(int gymID)
+    {
+        return Services.GymService.gymDictionary[gymID];
+    }
+
+}

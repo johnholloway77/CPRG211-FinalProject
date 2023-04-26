@@ -13,7 +13,7 @@ namespace Project3_Final.Models
 		private int hourlyFee;
 		private string certification;
 
-		public Trainer(int trainerId, string firstName, string lastName, string phoneNumber, string email, int baseSalary, int hourlyFee, string certification)
+		public Trainer(int trainerId, string firstName, string lastName, string phoneNumber, string email, int baseSalary, int hourlyFee, string certification, bool accountStatus)
 		{
 			this.trainerId = trainerId;
 			this.FirstName = firstName;
@@ -23,7 +23,9 @@ namespace Project3_Final.Models
 			this.baseSalary = baseSalary;
 			this.hourlyFee = hourlyFee;
 			this.certification = certification;
-		}
+			this.AccountStatus = accountStatus;
+
+        }
 
 		public int TrainerId { get => trainerId; set => trainerId = value; }
 		public int BaseSalary { get => baseSalary; set => baseSalary = value; }

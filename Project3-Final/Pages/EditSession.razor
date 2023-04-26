@@ -1,0 +1,55 @@
+﻿@page "/editsession"
+
+@using Project3_Final.Services;
+@using Project3_Final.Models;
+@using Microsoft.AspNetCore.Components.Forms
+
+
+@inject NavigationManager navHelper
+
+<h3>Edit Training Session</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Field</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Session ID</td>
+            <td>@sessionToEdit.SessionID</td>
+        </tr>
+        <tr>
+            <td>Personal Trainer</td>
+            <td>
+                <InputSelect @bind-Value="@sessionToEdit.TrainerID">
+                    @foreach (Trainer trainer in Services.TrainerServices.trainers)
+                    {
+                        <option value=@trainer.TrainerId>@trainer.FirstName @trainer.LastName</option>
+                    }
+                </InputSelect>
+            </td>
+        </tr>    
+        <tr>
+            <td>Customer Name</td>
+            <td>
+                <InputSelect @bind-Value="@sessionToEdit.CustID">
+                    @foreach (Customer customer in Services.CustomerServices.customers)
+                    {
+                        <option value=@customer.CustID>@customer.FirstName @customer.LastName</option>
+                    }
+                </InputSelect>
+            </td>
+        </tr>
+        <tr>
+            <td>Session Date and Time</td>
+            <td><input type="date" @bind-value="@sessionToEdit.SessionDate" /></td>
+        </tr>
+    </tbody>
+</table>
+
+@code {
+    internal static Session sessionToEdit;
+}

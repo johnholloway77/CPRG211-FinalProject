@@ -16,8 +16,11 @@ namespace Project3_Final.Services
 {
     public class GymService : ServicePage //, ImySqlConnectable
     {
+        //Initialize List<Gym> which will store the Customer Objects to be manipulated.
         public static List<Gym> gyms = new List<Gym>();
-
+       
+        //Initialize gymDictionary. Dictionary will recieve input gymID and return street & city
+        public static Dictionary<int, string> gymDictionary = new Dictionary<int, string>();
         public static void LoadFromDatabase()
         {
             gyms.Clear();
@@ -33,8 +36,12 @@ namespace Project3_Final.Services
                 while (dataReader.Read())
                 {
                     Gym _ = new Gym((int)dataReader["gymID"], (string)dataReader["street"], (string)dataReader["city"], (string)dataReader["prov"], (string)dataReader["postalCode"]);
-
+                   
+                    //add to list<Gym> gyms
                     gyms.Add(_);
+
+                    //add object instance to gymDictionary
+                    AddToGymDictionary((int)dataReader["gymID"], (string)dataReader["street"], (string)dataReader["city"]);
                 }
 
                 dataReader.Close();
@@ -82,5 +89,13 @@ namespace Project3_Final.Services
                 Console.WriteLine("Connection not open, cannot update!");
             }
         }
+    
+        
+
+        internal static void AddToGymDictionary(int gymID, string street, string city)
+        {
+            gymDictionary[gymID] = $"{street}\n{city}";
+        }
+
     }
 }

@@ -16,6 +16,10 @@
     </thead>
     <tbody>
         <tr>
+            <td>Gym ID</td>
+            <td>@gymID</td>
+        </tr>
+        <tr>
             <td>Street Address</td>
             <td><input type="text" @bind="@street" /></td>
         </tr>
@@ -51,7 +55,7 @@
 </table>
 
 <br />
-<btn class="btn btn-primary" @onclick="dataValidation">Update</btn>&nbsp&nbsp&nbsp
+<btn class="btn btn-primary" @onclick="dataValidation">Create</btn>&nbsp&nbsp&nbsp
 <btn class="btn btn-primary" @onclick="() => Cancle()">Cancle</btn>
 
 
@@ -104,7 +108,8 @@
     internal void createGym()
     {
         Services.GymService.AddToDatabase(gymID, street, city, province, postal);
-
+        Application.Current.MainPage.DisplayActionSheet("Success!", $"Gym {street} {city} added to database", "Okay");
+        Services.GymService.LoadFromDatabase();
         navHelper.NavigateTo("gym");
     }
 

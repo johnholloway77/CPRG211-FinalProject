@@ -1,0 +1,161 @@
+﻿@page "/newtrainer"
+
+@using Project3_Final.Services;
+@using Project3_Final.Models;
+
+
+@inject NavigationManager navHelper
+
+
+<h3>New Trainer</h3>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Field</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>Trainer ID</td>
+            <td>@trainerID</td>
+        </tr>
+        <tr>
+            <td>First name</td>
+            <td><input type="text" @bind="@firstName" /></td>
+
+        </tr>
+        <tr>
+            <td>Last name</td>
+            <td><input type="text" @bind="@lastName" /></td>
+        </tr>
+        <tr>
+            <td>Phone Number</td>
+            <td><input type="tel" @bind="@phoneNumber" maxlength="10" /></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" @bind="@email" /></td>
+        </tr>
+        <tr>
+            <td>Base Salary</td>
+            <td><InputNumber @bind-Value="@baseSalary" /></td>
+        </tr>
+        <tr>
+            <td>Hourly Fee</td>
+            <td><InputNumber @bind-Value="@hourlyFee" /></td>
+        </tr>
+        <tr>
+            <td>Certification</td>
+            <td><InputText @bind-Value="@certification" /></td>
+        </tr>
+
+        <tr>
+            <td>Employment Status</td>
+            <td>
+                <InputSelect @bind-Value="@accountStatus">
+                    <option value=true>Active</option>
+                    <option value=false>Inactive</option>
+                </InputSelect>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<br />
+<btn class="btn btn-primary" @onclick="dataValidation">Create</btn>&nbsp&nbsp&nbsp
+<btn class="btn btn-primary" @onclick="() => Cancle()">Cancle</btn>
+
+
+
+@code {
+    private int trainerID = Services.TrainerServices.trainers.Count + 1;
+    private string firstName;
+    private string lastName;
+    private string phoneNumber;
+    private string email;
+    private int baseSalary;
+    private int hourlyFee;
+    private string certification;
+    private bool accountStatus = true;
+
+    //validate that fields are entered to update Personal Trainer.
+    internal void dataValidation()
+    {
+        bool validStaff = true;
+        long x;
+        int y;
+        string alertMessage = "";
+
+        if (string.IsNullOrWhiteSpace(firstName))
+        {
+            validStaff = false;
+            alertMessage += "Firstname Required";
+        }
+        if (string.IsNullOrWhiteSpace(lastName))
+        {
+            validStaff = false;
+            alertMessage += "\nLastname Required";
+        }
+        if (string.IsNullOrWhiteSpace(phoneNumber))
+        {
+            validStaff = false;
+            alertMessage += "\nPhone number required.";
+        }
+        if (phoneNumber.Length < 10)
+        {
+            validStaff = false;
+            alertMessage += "\nPhone number must contain 10 digits";
+        }
+        if (!long.TryParse(phoneNumber, out x))
+        {
+            validStaff = false;
+            alertMessage += "\nPhone number can only contain numerical values";
+        }
+        if (string.IsNullOrWhiteSpace(email))
+        {
+            validStaff = false;
+            alertMessage += "\nEmail address required.";
+        }
+        if (baseSalary == null)
+        {
+            validStaff = false;
+            alertMessage += "\nSalary required.";
+        }
+        if (string.IsNullOrWhiteSpace(certification))
+        {
+            validStaff = false;
+            alertMessage += "\nCertification(s) required.";
+        }
+        if (validStaff)
+        {
+            updateTrainer();
+        }
+        else
+        {
+            Application.Current.MainPage.DisplayAlert("Error, cannot create Personal Trainer", alertMessage, "Okay");
+        }
+    }
+
+    internal void updateTrainer()
+    {
+
+        Services.TrainerServices.AddToDatabase(trainerID, firstName, lastName, phoneNumber, email, baseSalary, hourlyFee, certification, accountStatus);
+
+        Application.Current.MainPage.DisplayAlert("Note:", $"Trainer record updated for {firstName} {lastName}", "Okay");
+
+        Services.TrainerServices.LoadFromDatabase();
+        navHelper.NavigateTo("trainer");
+    }
+
+
+    internal void Cancle()
+    {
+        Services.TrainerServices.LoadFromDatabase();
+        navHelper.NavigateTo("trainer");
+    }
+
+}

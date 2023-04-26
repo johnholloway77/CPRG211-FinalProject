@@ -129,6 +129,7 @@
 
         Application.Current.MainPage.DisplayAlert("Note:", $"Customer record updated for {customerToEdit.FirstName} {customerToEdit.LastName}", "Okay");
 
+        Services.CustomerServices.LoadFromDatabase();
         navHelper.NavigateTo("customer");
     }
 
