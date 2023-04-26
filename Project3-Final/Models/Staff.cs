@@ -38,20 +38,22 @@ namespace Project3_Final.Models
 			return $"{StaffID}:{GymID}" + base.ToString() + $"{Salary}:{Position}:{AccountStatus}";
 		}
 
+
+		//OnAccountStatusChanged() does not need to be used for Staff Members
         protected override void OnAccountStatusChanged()
         {
-            //check if this object instance has already been initialized or if it is its' first initialization
+        //    //check if this object instance has already been initialized or if it is its' first initialization
 
-            if (!this.personInitialized) //if first initialization set bool to true
-            {
-                this.personInitialized = true;
-            }
+        //    if (!this.personInitialized) //if first initialization set bool to true
+        //    {
+        //        this.personInitialized = true;
+        //    }
 
-            else //if object is already initialized, allow it to run functions
-            {
+        //    else //if object is already initialized, allow it to run functions
+        //    {
 
-                Debug.WriteLine("Staff object OnAccountStatusChanged() run");
-            }
+        //        //Debug.WriteLine("Staff object OnAccountStatusChanged() run");
+        //    }
 
         }
     }

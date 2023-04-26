@@ -138,24 +138,6 @@
         }
     }
 
-    private void updateCustomer()
-    {        
-
-        Services.CustomerServices.UpdateRecord(customerToEdit.CustID, customerToEdit.FirstName, customerToEdit.LastName, customerToEdit.PhoneNumber, customerToEdit.Email, customerToEdit.DateOfBirth, customerToEdit.MembershipType, customerToEdit.AccountStatus);
-
-        Application.Current.MainPage.DisplayAlert("Note:", $"Customer record updated for {customerToEdit.FirstName} {customerToEdit.LastName}", "Okay");
-
-        Services.CustomerServices.LoadFromDatabase();
-        navHelper.NavigateTo("customer");
-    }
-
-    private void Cancle()
-    {
-        Services.CustomerServices.LoadFromDatabase();
-        navHelper.NavigateTo("customer");
-    }
-
-
     //notify user if customer has open training sessions when customer is deactivated.
     public async Task activeSessionNotification()
     {
@@ -195,6 +177,24 @@
         {
             updateCustomer();
         }
+    }
+
+
+    private void updateCustomer()
+    {        
+
+        Services.CustomerServices.UpdateRecord(customerToEdit.CustID, customerToEdit.FirstName, customerToEdit.LastName, customerToEdit.PhoneNumber, customerToEdit.Email, customerToEdit.DateOfBirth, customerToEdit.MembershipType, customerToEdit.AccountStatus);
+
+        Application.Current.MainPage.DisplayAlert("Note:", $"Customer record updated for {customerToEdit.FirstName} {customerToEdit.LastName}", "Okay");
+
+        Services.CustomerServices.LoadFromDatabase();
+        navHelper.NavigateTo("customer");
+    }
+
+    private void Cancle()
+    {
+        Services.CustomerServices.LoadFromDatabase();
+        navHelper.NavigateTo("customer");
     }
 
 

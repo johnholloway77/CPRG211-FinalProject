@@ -91,32 +91,48 @@ namespace Project3_Final.Services
             bool hasActiveSessions = false;
             List<Session> personSessions = new List<Session>();
 
-            int checkID;
-
-            Debug.WriteLine("1. personTpye.Name= " + personType.Name);
+            Debug.WriteLine("1. Type.Name= " + personType.Name);
 
             //check what type of object called function, adjust checkID appropriately.
+            //Because a Customer, Trainer or Gym can have the same number for their ID a 
+            //switch is needed to run specific foreach loops
             switch (personType.Name)
             {
                 case "Customer":
                     {
-                        Debug.WriteLine("2. personTpye.Name= " + personType.Name + " = \"Customer\"");
+                        Debug.WriteLine("2. Type.Name= " + personType.Name + " = \"Customer\"");
+
+                        foreach (Session session in SessionService.activeSessions)
+                        {
+                            if (session.CustID == personID)
+                            {
+                                hasActiveSessions = true;
+                                personSessions.Add(session);
+                            }
+                        }
+
+                        break;
+                    }
+                case "Trainer":
+                    {
+                        Debug.WriteLine("2. Type.Name= " + personType.Name + " = \"Trainer\"");
+
+                        foreach (Session session in SessionService.activeSessions)
+                        {
+                            if (session.TrainerID == personID)
+                            {
+                                hasActiveSessions = true;
+                                personSessions.Add(session);
+                            }
+                        }
+
                         break;
                     }
 
-            }
+             }
 
 
-
-            foreach (Session session in SessionService.activeSessions)
-            {
-                if (session.CustID == personID)
-                {
-                    hasActiveSessions = true;
-                    personSessions.Add(session);
-                }
-            }
-
+            
             return Tuple.Create(hasActiveSessions, personSessions);
 
         }

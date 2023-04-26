@@ -50,7 +50,7 @@ namespace Project3_Final.Models
 			else //if object is already initialized, allow it to run functions
 			{
 
-                Debug.WriteLine("Trainer ojbect OnAccountStatusChanged() run");
+                this.AccountStatusChanged = true;
             }
             
         }

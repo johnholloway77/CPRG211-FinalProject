@@ -2,7 +2,7 @@
 
 @using Project3_Final.Services;
 @using Project3_Final.Models;
-
+@using System.Diagnostics;
 
 @inject NavigationManager navHelper
 
@@ -125,13 +125,74 @@
         }
         if (validStaff)
         {
-            updateTrainer();
+            checkForAccountStatusChange();
+            //updateTrainer();
         }
         else
         {
             Application.Current.MainPage.DisplayAlert("Error, cannot update Personal Trainer", alertMessage, "Okay");
         }
     }
+
+    private async Task checkForAccountStatusChange()
+    {
+        if (trainerToEdit.AccountStatusChanged)
+        {
+            await activeSessionNotification();
+            trainerToEdit.AccountStatusChanged = false;
+        }
+        else
+        {
+            updateTrainer();
+        }
+    }
+
+
+    //notify user if customer has open training sessions when customer is deactivated.
+    public async Task activeSessionNotification()
+    {
+        var sessionInformation = SessionService.CheckForActiveSessions(trainerToEdit.GetType(), trainerToEdit.TrainerId);
+        //Debug.WriteLine("OnAccountStatusChange() has run completely");
+
+
+
+        if (sessionInformation.Item1 == true && trainerToEdit.AccountStatus == false)
+        {
+            bool action = await Application.Current.MainPage.DisplayAlert("Warning", $"{trainerToEdit.FirstName} {trainerToEdit.LastName} has active client training sessions. \nDeactivate Active Sessions for Trainer?", "Deactivate Sessions", "Ignore Warning");
+
+            switch (action)
+            {
+                case true:
+                    {
+                        Debug.WriteLine("Running DeactivateSessions(sessionInformation.Item2);");
+                        Services.SessionService.DeactivateSessions(sessionInformation.Item2);
+                        //Console.WriteLine("Deactivate Sessions Method to be engaged.");
+
+                        Debug.WriteLine("Running updateCustomer();");
+                        updateTrainer();
+
+                        break;
+                    }
+                case false:
+                    {
+                        updateTrainer();
+                        break;
+                    }
+
+            }
+
+
+        }
+        else
+        {
+            updateTrainer();
+        }
+    }
+
+
+
+
+
 
     internal void updateTrainer()
     {
