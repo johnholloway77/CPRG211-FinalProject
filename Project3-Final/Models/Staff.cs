@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Project3_Final.Models
 {
-	public class Staff:Person
+	public class Staff : Person
 	{
 		private int staffID;
 		private int gymID;
@@ -36,5 +37,22 @@ namespace Project3_Final.Models
 		{
 			return $"{StaffID}:{GymID}" + base.ToString() + $"{Salary}:{Position}:{AccountStatus}";
 		}
-	}
+
+        protected override void OnAccountStatusChanged()
+        {
+            //check if this object instance has already been initialized or if it is its' first initialization
+
+            if (!this.personInitialized) //if first initialization set bool to true
+            {
+                this.personInitialized = true;
+            }
+
+            else //if object is already initialized, allow it to run functions
+            {
+
+                Debug.WriteLine("Staff object OnAccountStatusChanged() run");
+            }
+
+        }
+    }
 }

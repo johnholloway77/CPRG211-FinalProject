@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Project3_Final.Models
 {
-	public class Trainer:Person
-	{
+	public class Trainer: Person
+    {
 		private int trainerId;
 		private int baseSalary;
 		private int hourlyFee;
@@ -36,7 +37,24 @@ namespace Project3_Final.Models
 		{
 			return $"{TrainerId}" + base.ToString() + $"{BaseSalary}:{HourlyFee}:{Certification}:{AccountStatus}";
 		}
-	}
+
+        protected override void OnAccountStatusChanged()
+        {
+			//check if this object instance has already been initialized or if it is its' first initialization
+
+			if (!this.personInitialized) //if first initialization set bool to true
+            {
+                this.personInitialized = true;
+            }
+
+			else //if object is already initialized, allow it to run functions
+			{
+
+                Debug.WriteLine("Trainer ojbect OnAccountStatusChanged() run");
+            }
+            
+        }
+    }
 }
 
 

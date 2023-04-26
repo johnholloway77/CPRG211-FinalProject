@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Project3_Final.Models;
+//using MySqlX.XDevAPI;
 
 namespace Project3_Final.Services
 {
@@ -77,6 +78,72 @@ namespace Project3_Final.Services
             else
             {
                 Console.WriteLine("Connection not open, cannot update!");
+            }
+        }
+
+
+
+        //Function will check if customer/trainer has active training sessions, return tuple with
+        //bool indicating if the user does or not, and a list<sessions> containing all of the sessions in which
+        //the person is involved
+        public static Tuple<bool, List<Session>> CheckForActiveSessions(Type personType, int personID)
+        {
+            bool hasActiveSessions = false;
+            List<Session> personSessions = new List<Session>();
+
+            int checkID;
+
+            Debug.WriteLine("1. personTpye.Name= " + personType.Name);
+
+            //check what type of object called function, adjust checkID appropriately.
+            switch (personType.Name)
+            {
+                case "Customer":
+                    {
+                        Debug.WriteLine("2. personTpye.Name= " + personType.Name + " = \"Customer\"");
+                        break;
+                    }
+
+            }
+
+
+
+            foreach (Session session in SessionService.activeSessions)
+            {
+                if (session.CustID == personID)
+                {
+                    hasActiveSessions = true;
+                    personSessions.Add(session);
+                }
+            }
+
+            return Tuple.Create(hasActiveSessions, personSessions);
+
+        }
+
+        public static void DeactivateSessions(List<Session> sessions)
+        {
+            Debug.WriteLine("List<Sessions> session.Count = " +  sessions.Count);
+
+            foreach (Session session in sessions)
+            {
+                string query = $"UPDATE session SET sessionstatus=FALSE WHERE sessionID={session.SessionID};";
+
+                Debug.WriteLine (query);
+
+
+                if (OpenConnection() == true)
+                {
+                    MySqlCommand cmd = new MySqlCommand();
+                    cmd.CommandText = query;
+                    cmd.Connection = connection;
+                    cmd.ExecuteNonQuery();
+                    CloseConnection();
+                }
+                else
+                {
+                    Console.WriteLine("Connection not open, cannot update!");
+                }
             }
         }
 

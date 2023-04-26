@@ -2,6 +2,7 @@
 @using Project3_Final.Services;
 @using Project3_Final.Models;
 @using Microsoft.AspNetCore.Components.Forms
+@using System.Diagnostics;
 
 @inject NavigationManager navHelper
 
@@ -70,6 +71,7 @@
 </body>
 
 @code {
+
     public static Customer? customerToEdit;
 
 
@@ -114,11 +116,25 @@
 
         if (validCustomer)
         {
-            updateCustomer();
+            checkForAccountStatusChange();
+            //updateCustomer();
         }
         else
         {
             Application.Current.MainPage.DisplayAlert("Error, cannot update customer", alertMessage, "Okay");
+        }
+    }
+
+    private async Task checkForAccountStatusChange()
+    {
+        if (customerToEdit.AccountStatusChanged)
+        {
+            await activeSessionNotification();
+            customerToEdit.AccountStatusChanged = false;
+        }
+        else
+        {
+            updateCustomer();
         }
     }
 
@@ -138,5 +154,50 @@
         Services.CustomerServices.LoadFromDatabase();
         navHelper.NavigateTo("customer");
     }
+
+
+    //notify user if customer has open training sessions when customer is deactivated.
+    public async Task activeSessionNotification()
+    {
+        var sessionInformation = SessionService.CheckForActiveSessions(customerToEdit.GetType(), customerToEdit.CustID);
+        //Debug.WriteLine("OnAccountStatusChange() has run completely");
+
+
+
+        if (sessionInformation.Item1 == true && customerToEdit.AccountStatus == false)
+        {
+            bool action = await Application.Current.MainPage.DisplayAlert("Warning", $"{customerToEdit.FirstName} {customerToEdit.LastName} has active training sessions. \nDeactivate Active Sessions for Customer?", "Deactivate Sessions", "Ignore Warning");
+
+            switch (action)
+            {
+                case true:
+                    {
+                        Debug.WriteLine("Running DeactivateSessions(sessionInformation.Item2);");
+                        Services.SessionService.DeactivateSessions(sessionInformation.Item2);
+                        //Console.WriteLine("Deactivate Sessions Method to be engaged.");
+
+                        Debug.WriteLine("Running updateCustomer();");
+                        updateCustomer();
+
+                        break;
+                    }
+                case false:
+                    {
+                        updateCustomer();
+                        break;
+                    }
+
+            }
+
+
+        }
+        else
+        {
+            updateCustomer();
+        }
+    }
+
+
+
 }
 
