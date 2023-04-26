@@ -18,12 +18,14 @@ namespace Project3_Final.Services
     {
         //Initialize List<Gym> which will store the Customer Objects to be manipulated.
         public static List<Gym> gyms = new List<Gym>();
-       
+        public static List<Gym> activeGyms = new List<Gym>();
+
         //Initialize gymDictionary. Dictionary will recieve input gymID and return street & city
         public static Dictionary<int, string> gymDictionary = new Dictionary<int, string>();
         public static void LoadFromDatabase()
         {
             gyms.Clear();
+            activeGyms.Clear();
 
             string query = "SELECT * FROM gym";
 
@@ -35,13 +37,19 @@ namespace Project3_Final.Services
 
                 while (dataReader.Read())
                 {
-                    Gym _ = new Gym((int)dataReader["gymID"], (string)dataReader["street"], (string)dataReader["city"], (string)dataReader["prov"], (string)dataReader["postalCode"]);
+                    Gym _ = new Gym((int)dataReader["gymID"], (string)dataReader["street"], (string)dataReader["city"], (string)dataReader["prov"], (string)dataReader["postalCode"], (bool)dataReader["gymStatus"]);
                    
                     //add to list<Gym> gyms
                     gyms.Add(_);
 
                     //add object instance to gymDictionary
                     AddToGymDictionary((int)dataReader["gymID"], (string)dataReader["street"], (string)dataReader["city"]);
+
+                    //add to activelist
+                    if ((bool)dataReader["gymStatus"])
+                    {
+                        activeGyms.Add(_);
+                    }
                 }
 
                 dataReader.Close();
@@ -54,9 +62,9 @@ namespace Project3_Final.Services
             }
         }
 
-        public static void AddToDatabase(int gymID, string street, string city, string province, string postal)
+        public static void AddToDatabase(int gymID, string street, string city, string province, string postal, bool gymStatus)
         {
-            string query = $"INSERT INTO gym (gymID, street, city, prov, postalCode) VALUES ({gymID}, '{street}', '{city}', '{province}', '{postal}')";
+            string query = $"INSERT INTO gym (gymID, street, city, prov, postalCode, gymStatus) VALUES ({gymID}, '{street}', '{city}', '{province}', '{postal}', {gymStatus})";
 
             if (OpenConnection() == true)
             {
@@ -68,9 +76,9 @@ namespace Project3_Final.Services
             }
         }
 
-        public static void UpdateRecord(int gymID, string street, string city, string province, string postal)
+        public static void UpdateRecord(int gymID, string street, string city, string province, string postal, bool gymStatus)
         {
-            string query = $"UPDATE gym SET street='{street}', city='{city}', prov='{province}', postalCode='{postal}' WHERE gymID='{gymID}'";
+            string query = $"UPDATE gym SET street='{street}', city='{city}', prov='{province}', postalCode='{postal}', gymStatus={gymStatus} WHERE gymID='{gymID}'";
 
             if (OpenConnection() == true)
             {
@@ -89,8 +97,9 @@ namespace Project3_Final.Services
                 Console.WriteLine("Connection not open, cannot update!");
             }
         }
-    
-        
+
+
+
 
         internal static void AddToGymDictionary(int gymID, string street, string city)
         {

@@ -45,6 +45,15 @@
             <td>Postal Code</td>
             <td><input type="text" @bind="gymToEdit.Postal" /></td>
         </tr>
+        <tr>
+            <td>Gym Status</td>
+            <td>
+                <InputSelect @bind-Value="@gymToEdit.GymStatus">
+                    <option value=true>Active</option>
+                    <option value=false>Inactive</option>
+                </InputSelect>
+            </td>
+        </tr>
     </tbody>
 </table>
         
@@ -97,7 +106,7 @@
 
     internal void updateGym()
     {
-        Services.GymService.UpdateRecord(gymToEdit.GymID, gymToEdit.Street, gymToEdit.City, gymToEdit.Province, gymToEdit.Postal);
+        Services.GymService.UpdateRecord(gymToEdit.GymID, gymToEdit.Street, gymToEdit.City, gymToEdit.Province, gymToEdit.Postal, gymToEdit.GymStatus);
         Application.Current.MainPage.DisplayAlert("Note:", $"Record updated for {gymToEdit.Street} {gymToEdit.City}", "Okay");
 
         navHelper.NavigateTo("gym");

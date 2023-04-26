@@ -15,12 +15,16 @@ namespace Project3_Final.Services
         //Initialize List<TrainingSession> which will store the Trainer Objects to be manipulated.
         public static List<Trainer> trainers = new List<Trainer>();
 
+        public static List<Trainer> activeTrainers = new List<Trainer>();
+
         //Initialize trainerDictionary. Dictionary will input trainerID and return first & last name
         public static Dictionary<int, string> trainerDictionary = new Dictionary<int, string>();
 
         public static void LoadFromDatabase()
         {
             trainers.Clear();
+            activeTrainers.Clear();
+
             string query = "SELECT * FROM trainers";
 
             if (OpenConnection() == true)
@@ -37,6 +41,12 @@ namespace Project3_Final.Services
 
                     //add object instance to trainerDictionary
                     AddToTrainerDictionary(_.TrainerId, _.FirstName, _.LastName);
+                    
+                    //if object instance is active add to List<T> active<t>
+                    if ((bool)dataReader["employmentStatus"])
+                    {
+                        activeTrainers.Add(_);
+                    }
                 }
 
                 dataReader.Close();

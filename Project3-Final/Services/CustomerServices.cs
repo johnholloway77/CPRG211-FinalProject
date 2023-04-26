@@ -14,6 +14,7 @@ namespace Project3_Final.Services
     {
         //Initialize List<Customers> which will store the Customer Objects to be manipulated.
         public static List<Customer> customers = new List<Customer>();
+        public static List<Customer> activeCustomers = new List<Customer>();
 
         //Initialize customerDictionary. Dictionary will input custID and return first & last name
         public static Dictionary<int, string> customerDictionary = new Dictionary<int, string>();
@@ -24,6 +25,7 @@ namespace Project3_Final.Services
 
             //ensure that List<Customers> is empty whenever method is run. Will prevent duplication in List
             customers.Clear();
+            activeCustomers.Clear();
 
             //Query string will select all rows of data from table customers
             string query = "SELECT * FROM customers";
@@ -45,6 +47,12 @@ namespace Project3_Final.Services
                     
                     //add object instance to trainerDictionary
                     AddToCustomerDictionary(_.CustID, _.FirstName, _.LastName);
+
+                    //if object instance is active add to List<T> active<t>
+                    if ((bool)dataReader["accountStatus"])
+                    {
+                        activeCustomers.Add(_);
+                    }
                 }
 
                 dataReader.Close();

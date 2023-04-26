@@ -1,0 +1,146 @@
+﻿@page "/newsession"
+
+@using Project3_Final.Services;
+@using Project3_Final.Models;
+@using Microsoft.AspNetCore.Components.Forms
+
+
+@inject NavigationManager navHelper
+
+<h3>New Personal Training Session</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Field</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Session ID</td>
+            <td>@sessionID</td>
+        </tr>
+        <tr>
+            <td>Personal Trainer</td>
+            <td>
+                <InputSelect @bind-Value="@trainerID">
+                    @foreach (Trainer trainer in Services.TrainerServices.activeTrainers) //only allow active trainers to be selected
+                    {
+                        <option value=@trainer.TrainerId>@trainer.FirstName @trainer.LastName</option>
+                    }
+                </InputSelect>
+            </td>
+        </tr>
+        <tr>
+            <td>Customer Name</td>
+            <td>
+                <InputSelect @bind-Value="@custID">
+                    @foreach (Customer customer in Services.CustomerServices.activeCustomers) //Only allow active customers to be selected
+                    {
+                        <option value=@customer.CustID>@customer.FirstName @customer.LastName</option>
+                    }
+                </InputSelect>
+            </td>
+        </tr>
+        <tr>
+            <td>Gym Location</td>
+            <td>
+                <InputSelect @bind-Value="@gymID">
+                @foreach (Gym gym in Services.GymService.activeGyms) // Only allow active gyms to be selected
+                {
+                    <option value=@gym.GymID>@gymLocation(gym.GymID)</option>
+                }
+                </InputSelect>
+            </td>
+        </tr>
+        <tr>
+            <td>Session Date</td>
+            <td><input type="date" @bind-value="@sessionDate" /></td>
+        </tr>
+        <tr>
+            <td>Session Time</td>
+            <td><input type="time" @bind-value="@sessionDate" /></td>
+        </tr>
+        <tr>
+            <td>Session Status</td>
+            <td>
+                <InputSelect @bind-Value="@sessionStatus">
+                    <option selected value=true>Active</option>
+                    <option value=false>Inactive</option>
+                </InputSelect>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<br />
+<btn class="btn btn-primary" @onclick="() => dataValidatoin()">Create</btn>&nbsp&nbsp&nbsp
+<btn class="btn btn-primary" @onclick="() => cancle()">Cancle</btn>
+
+
+
+
+
+@code {
+    private int sessionID = Services.SessionService.sessions.Count + 1;
+    private int trainerID = -1;
+    private int custID = -1;
+    private int gymID = -1;
+    private DateTime sessionDate = DateTime.Today;
+    private bool sessionStatus = true;
+
+    private void dataValidatoin()
+    {
+        bool validSession = true;
+        string alertMessage = "";
+
+        if(trainerID < 1)
+        {
+            validSession = false;
+            alertMessage += "Personal Trainer Required";
+        }
+        if(custID < 1)
+        {
+            validSession = false;
+            alertMessage += "\nCustomer Required";
+        }
+        if(gymID < 1)
+        {
+            validSession = false;
+            alertMessage += "\nGym Location required";
+        }
+
+        if (validSession)
+        {
+            createSession();
+        }
+        else
+        {
+            Application.Current.MainPage.DisplayAlert("Error, cannot create session", alertMessage, "Okay");
+        }
+
+    }
+
+    private void createSession()
+    {
+        Services.SessionService.AddToDatabase(sessionID, trainerID, custID, gymID, sessionDate, sessionStatus);
+
+        Application.Current.MainPage.DisplayAlert("Success", "Training session has been created", "Okay");
+
+        Services.SessionService.LoadFromDatabase();
+        navHelper.NavigateTo("session");
+
+    }
+
+    private void cancle()
+    {
+        Services.SessionService.LoadFromDatabase();
+        navHelper.NavigateTo("session");
+    }
+
+    private string gymLocation(int gymID)
+    {
+        return Services.GymService.gymDictionary[gymID];
+    }
+}

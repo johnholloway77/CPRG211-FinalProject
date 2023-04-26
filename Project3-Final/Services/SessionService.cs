@@ -12,11 +12,13 @@ namespace Project3_Final.Services
     internal class SessionService: ServicePage
     {        //Initialize List<Session> which will store the session Objects to be manipulated.
         public static List<Session> sessions = new List<Session>();
-
+        public static List<Session> activeSessions = new List<Session>();
 
         public static void LoadFromDatabase()
         {
             sessions.Clear();
+            activeSessions.Clear();
+
             string query = "SELECT * FROM session";
 
             if (OpenConnection() == true)
@@ -31,7 +33,13 @@ namespace Project3_Final.Services
                     //add to list<Sessions> sessions
                     sessions.Add(_);
 
+                    if ((bool)dataReader["sessionStatus"])
+                    {
+                        activeSessions.Add(_);
+                    }
+
                 }
+
 
                 dataReader.Close();
                 CloseConnection();
@@ -44,7 +52,7 @@ namespace Project3_Final.Services
 
         public static void AddToDatabase(int sessionID, int trainerID, int custID, int gymID, DateTime sessionDate, bool sessionStatus)
         {
-            string query = $"INSERT INTO session (sessionID, trainerID, custID, gymID, sessionDate, sessionstatus) VALUES ({sessionID}, {trainerID}, {custID}, {gymID}, STR_TO_DATE('{sessionDate.ToString("yyyy-MM-dd-H-mm")}','%Y-%m-%d-%k-i%'), {sessionStatus})";
+            string query = $"INSERT INTO session (sessionID, trainerID, custID, gymID, sessionDate, sessionstatus) VALUES ({sessionID}, {trainerID}, {custID}, {gymID}, STR_TO_DATE('{sessionDate.ToString("yyyy-MM-dd H mm")}','%Y-%m-%d %k %i'), {sessionStatus})";
 
             if (OpenConnection() == true)
             {
@@ -56,7 +64,7 @@ namespace Project3_Final.Services
 
         public static void UpdateRecord(int sessionID, int trainerID, int custID, int gymID, DateTime sessionDate, bool sessionStatus)
         {
-            string query = $"UPDATE session SET trainerID={trainerID}, custID={custID}, gymID={gymID}, sessionDate=STR_TO_DATE('{sessionDate.ToString("yyyy-MM-dd-H-mm")}','%Y-%m-%d-%k-i%') WHERE sessionID={sessionID}";
+            string query = $"UPDATE session SET trainerID={trainerID}, custID={custID}, gymID={gymID}, sessionDate=STR_TO_DATE('{sessionDate.ToString("yyyy-MM-dd H mm")}','%Y-%m-%d %k %i'), sessionstatus={sessionStatus} WHERE sessionID={sessionID}";
 
             if (OpenConnection() == true)
             {
@@ -71,9 +79,6 @@ namespace Project3_Final.Services
                 Console.WriteLine("Connection not open, cannot update!");
             }
         }
-
-
-
 
     }
 }

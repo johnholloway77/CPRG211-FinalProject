@@ -44,12 +44,61 @@
             </td>
         </tr>
         <tr>
-            <td>Session Date and Time</td>
+            <td>Gym Location</td>
+            <td>
+                <InputSelect @bind-Value="@sessionToEdit.GymID">
+                    @foreach (Gym gym in Services.GymService.gyms)
+                    {
+                        <option value=@gym.GymID>@gymLocation(gym.GymID)</option>
+                    }
+                </InputSelect>
+            </td>
+        </tr>
+        <tr>
+            <td>Session Date</td>
             <td><input type="date" @bind-value="@sessionToEdit.SessionDate" /></td>
+        </tr>
+        <tr>
+            <td>Session Time</td>
+            <td><input type="time" @bind-value="@sessionToEdit.SessionDate" /></td>
+        </tr>
+        <tr>
+            <td>Session Status</td>
+            <td><InputSelect @bind-Value="@sessionToEdit.SessionStatus">
+                <option value=true>Active</option>
+                <option value=false>Inactive</option>
+            </InputSelect></td>
         </tr>
     </tbody>
 </table>
 
+<br />
+<btn class="btn btn-primary" @onclick="() => UpdateSession()">Update</btn>&nbsp&nbsp&nbsp
+<btn class="btn btn-primary" @onclick="() => Cancle()">Cancle</btn>
+
+
 @code {
     internal static Session sessionToEdit;
+
+    private void UpdateSession()
+    {
+        Services.SessionService.UpdateRecord(sessionToEdit.SessionID, sessionToEdit.TrainerID, sessionToEdit.CustID, sessionToEdit.GymID, sessionToEdit.SessionDate, sessionToEdit.SessionStatus);
+
+        Application.Current.MainPage.DisplayAlert("Success", "Training session has been updated", "Okay");
+
+        Services.SessionService.LoadFromDatabase();
+        navHelper.NavigateTo("session");
+
+    }
+
+    private void Cancle()
+    {
+        Services.SessionService.LoadFromDatabase();
+        navHelper.NavigateTo("session");
+    }
+
+    private string gymLocation(int gymID)
+    {
+        return Services.GymService.gymDictionary[gymID];
+    }
 }

@@ -7,7 +7,7 @@
 
 <h1>Personal Training Sessions</h1>
 
-<btn class="btn btn-primary">New Training Session</btn>
+<btn class="btn btn-primary" @onclick="() => newSession()">New Training Session</btn>
 
 <table class="table">
     <thead>
@@ -38,6 +38,11 @@
 
 
 @code {
+
+    private void newSession()
+    {
+        navHelper.NavigateTo("newsession");
+    }
 
     private void editSession(Session sessionToEdit)
     {

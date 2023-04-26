@@ -51,6 +51,15 @@
             <td>Postal Code</td>
             <td><input type="text" @bind="postal" /></td>
         </tr>
+        <tr>
+            <td>Gym Status</td>
+            <td>
+                <InputSelect @bind-Value="@gymStatus">
+                    <option value=true>Active</option>
+                    <option value=false>Inactive</option>
+                </InputSelect>
+            </td>
+        </tr>
     </tbody>
 </table>
 
@@ -67,6 +76,7 @@
     private string city;
     private string province = "Alberta";
     private string postal;
+    private bool gymStatus = true;
 
     //validate that fields are entered to update gym.
     internal void dataValidation()
@@ -107,7 +117,7 @@
 
     internal void createGym()
     {
-        Services.GymService.AddToDatabase(gymID, street, city, province, postal);
+        Services.GymService.AddToDatabase(gymID, street, city, province, postal, gymStatus);
         Application.Current.MainPage.DisplayActionSheet("Success!", $"Gym {street} {city} added to database", "Okay");
         Services.GymService.LoadFromDatabase();
         navHelper.NavigateTo("gym");

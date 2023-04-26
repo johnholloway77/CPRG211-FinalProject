@@ -74,7 +74,7 @@
 
 
     //validate that fields are entered to update customer.
-    internal void dataValidation()
+    private void dataValidation()
     {
         bool validCustomer = true;
         long x;
@@ -122,7 +122,7 @@
         }
     }
 
-    internal void updateCustomer()
+    private void updateCustomer()
     {        
 
         Services.CustomerServices.UpdateRecord(customerToEdit.CustID, customerToEdit.FirstName, customerToEdit.LastName, customerToEdit.PhoneNumber, customerToEdit.Email, customerToEdit.DateOfBirth, customerToEdit.MembershipType, customerToEdit.AccountStatus);
@@ -133,7 +133,7 @@
         navHelper.NavigateTo("customer");
     }
 
-    internal void Cancle()
+    private void Cancle()
     {
         Services.CustomerServices.LoadFromDatabase();
         navHelper.NavigateTo("customer");

@@ -16,6 +16,7 @@
             <th>City</th>
             <th>Province</th>
             <th>Postal Code</th>
+            <th>Status</th>
         </tr>
     </thead>
     <tbody>
@@ -26,6 +27,7 @@
                 <td>@gym.City</td>
                 <td>@gym.Province</td>
                 <td>@gym.Postal</td>
+                <td>@gym.GymStatus</td>
                 <button class="btn-outline-primary" @onclick="() => LoadEditPage(gym)">Edit</button>
             </tr>
         }
