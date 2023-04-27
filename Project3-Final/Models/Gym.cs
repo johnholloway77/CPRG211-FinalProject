@@ -7,7 +7,9 @@
 
 Additionally, it contains the abstract method gymStatusChanged()
 This method is used  to see if the active/inactive status of the gym instance is changed. Methods will use this bool to run additional methods scanning if a gym has been set to inactive while having active personal training sessions. 
-
+ * 
+ * Date: 27 April 2023
+ * By: John Holloway and Victor Odhiambo
 
 */
 

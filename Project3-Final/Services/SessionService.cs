@@ -4,6 +4,9 @@
 Inherits several methods from class ServicePage
 
 Unlike other service files, this file contains additional methods for 
+ * 
+ * Date: 27 April 2023
+ * By: John Holloway and Guntas Dhaliwal
 
  */
 
@@ -20,7 +23,8 @@ using Project3_Final.Models;
 namespace Project3_Final.Services
 {
     internal class SessionService: ServicePage
-    {        //Initialize List<Session> which will store the session Objects to be manipulated.
+    {        
+        //Initialize List<Session> which will store the session Objects to be manipulated.
         public static List<Session> sessions = new List<Session>();
         public static List<Session> activeSessions = new List<Session>();
 
@@ -31,33 +35,48 @@ namespace Project3_Final.Services
 
             string query = "SELECT * FROM session";
 
-            if (OpenConnection() == true)
+
+            //Try Catch block to incase of invalid cast exceptions
+            //ie table field is null
+            try
             {
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-                MySqlDataReader dataReader = cmd.ExecuteReader();
-
-                while (dataReader.Read())
+                if (OpenConnection() == true)
                 {
-                    Session _ = new Session((int)dataReader["sessionID"], (int)dataReader["trainerID"], (int)dataReader["custID"], (int)dataReader["gymID"], (DateTime)dataReader["sessionDate"], (bool)dataReader["sessionStatus"]);
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    MySqlDataReader dataReader = cmd.ExecuteReader();
 
-                    //add to list<Sessions> sessions
-                    sessions.Add(_);
-
-                    if ((bool)dataReader["sessionStatus"])
+                    while (dataReader.Read())
                     {
-                        activeSessions.Add(_);
+                        Session _ = new Session((int)dataReader["sessionID"], (int)dataReader["trainerID"], (int)dataReader["custID"], (int)dataReader["gymID"], (DateTime)dataReader["sessionDate"], (bool)dataReader["sessionStatus"]);
+
+                        //add to list<Sessions> sessions
+                        sessions.Add(_);
+
+                        if ((bool)dataReader["sessionStatus"])
+                        {
+                            activeSessions.Add(_);
+                        }
+
                     }
 
+
+                    dataReader.Close();
+                    CloseConnection();
                 }
-
-
-                dataReader.Close();
+                else
+                {
+                    Debug.WriteLine("Unable to load and list using select");
+                }
+            }
+            catch (InvalidCastException ex)
+            {
+                Debug.WriteLine("Error casting value from database. Check database data type and if null\n" + ex.Message);
+            }
+            finally //Close connection to prevent InvalidOperationException
+            {
                 CloseConnection();
             }
-            else
-            {
-                Debug.WriteLine("Unable to load and list using select");
-            }
+
         }
 
         public static void AddToDatabase(int sessionID, int trainerID, int custID, int gymID, DateTime sessionDate, bool sessionStatus)

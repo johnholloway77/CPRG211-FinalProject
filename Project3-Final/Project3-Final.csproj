@@ -63,7 +63,6 @@
       <Compile Remove="Data\WeatherForecast.cs" />
       <Compile Remove="Data\WeatherForecastService.cs" />
       <Compile Remove="Models\Equipment.cs" />
-      <Compile Remove="Services\ImySqlConnectable.cs" />
     </ItemGroup>
 
     <ItemGroup>

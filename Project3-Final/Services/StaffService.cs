@@ -2,7 +2,10 @@
  StaffServices is a class which contains primarily static methods for the manipulation of Staff objects, as well as updating the database for the respective object.
 
 Inherits several methods from class ServicePage
- 
+  * 
+ * Date: 27 April 2023
+ * By: John Holloway and Guntas Dhaliwal
+
  */
 
 using System;
@@ -27,7 +30,12 @@ namespace Project3_Final.Services
             staffs.Clear();
             string query = "SELECT * FROM staff";
 
-            if (OpenConnection() == true)
+            //Try Catch block to incase of invalid cast exceptions
+            //ie table field is null
+            try
+            {
+
+                if (OpenConnection() == true)
             {
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 MySqlDataReader dataReader = cmd.ExecuteReader();
@@ -42,9 +50,18 @@ namespace Project3_Final.Services
                 dataReader.Close();
                 CloseConnection();
             }
-            else
+                else
             {
                 Debug.WriteLine("Unable to load and list using select");
+            }
+            }
+            catch (InvalidCastException ex)
+            {
+                Debug.WriteLine("Error casting value from database. Check database data type and if null\n" + ex.Message);
+            }
+            finally //Close connection to prevent InvalidOperationException
+            {
+                CloseConnection();
             }
         }
 

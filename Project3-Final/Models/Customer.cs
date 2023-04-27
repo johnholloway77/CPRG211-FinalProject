@@ -5,6 +5,8 @@
  * 
  * This method contains basic fields,such as custID (the primary key for the Customer table in the MySQL database), as well as other inforamtion such as date of birth, memberhsip type, etc.
  * 
+ * Date: 27 April 2023
+ * By: John Holloway
  */
 
 

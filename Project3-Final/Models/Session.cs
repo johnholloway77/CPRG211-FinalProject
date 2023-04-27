@@ -2,6 +2,10 @@
  File for personal training objects.
  Contains sessionID, which is primary key in MySQL database, and several other IDs which are foriegn keys in the database.
  
+ * 
+ * Date: 27 April 2023
+ * By: John Holloway and Victor Odhiambo
+
  */
 
 using System;

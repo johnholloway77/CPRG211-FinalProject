@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Project3_Final.Models.Customer">
+    <Position X="4.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAEAAAACAAAAAgQAAIAAAACAAAAAAQ=</HashCode>
+      <FileName>Models\Customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project3_Final.Models.Gym">
+    <Position X="13.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAABAAcAAYACAACAAAAAgAACAMIAggBAAY=</HashCode>
+      <FileName>Models\Gym.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project3_Final.Models.Person">
+    <Position X="7.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACBAAAAkQAAAQEAAAEAAAAAAAAgCCAAAAgw=</HashCode>
+      <FileName>Models\Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project3_Final.Models.Session">
+    <Position X="15.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAgABIAIAACAAAKACAACgAgAAAA=</HashCode>
+      <FileName>Models\Session.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project3_Final.Models.Staff">
+    <Position X="10.5" Y="12.75" Width="1.5" />
+    <InheritanceLine Type="Project3_Final.Models.Person" FixedToPoint="true">
+      <Path>
+        <Point X="8.5" Y="11.814" />
+        <Point X="8.5" Y="12.375" />
+        <Point X="11.25" Y="12.375" />
+        <Point X="11.25" Y="12.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAgAAAkAAAAIAAAAAAAAAACCAAAAggAAAQ=</HashCode>
+      <FileName>Models\Staff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project3_Final.Models.Trainer">
+    <Position X="7.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAABAAAAAAAEAAABDAAAAQgAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Models\Trainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project3_Final.AppDelegate">
+    <Position X="17.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Platforms\MacCatalyst\AppDelegate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project3_Final.Program">
+    <Position X="19" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Platforms\MacCatalyst\Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project3_Final.App">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project3_Final.MainPage">
+    <Position X="15.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project3_Final.MauiProgram">
+    <Position X="17.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MauiProgram.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project3_Final.Services.CustomerServices">
+    <Position X="6" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAIAAAABAAAAAAAAAAAAAAABAAAAAAAgAAgAAAAAAAI=</HashCode>
+      <FileName>Services\CustomerServices.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project3_Final.Services.GymService">
+    <Position X="10.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAEAAQAAAAAAAAAAAABAACAAAAgCAAAAAAAAAA=</HashCode>
+      <FileName>Services\GymService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project3_Final.Services.ServicePage">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEQBAAAABABAAAQAAAAgAAAAAAgAAAAI=</HashCode>
+      <FileName>Services\ServicePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project3_Final.Services.SessionService">
+    <Position X="12.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAIAQAAAAAAAARAAAAAAAgAAAAAAgAAAA=</HashCode>
+      <FileName>Services\SessionService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project3_Final.Services.StaffServices">
+    <Position X="4" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAIAABAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Services\StaffService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project3_Final.Services.TrainerServices">
+    <Position X="8.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAIAAAAAAAAAAQAAAAAAABQAAAAABgAAAAAAAAAAA=</HashCode>
+      <FileName>Services\TrainerService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

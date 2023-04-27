@@ -2,7 +2,12 @@
  Customer Services is a class which contains primarily static methods for the manipulation of Customer objects, as well as updating the database for the respective object.
 
 Inherits several methods from class ServicePage
+
+ * 
+ * Date: 27 April 2023
+ * By: John Holloway
  
+
  */
 
 using Project3_Final.Models;
@@ -18,9 +23,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Org.BouncyCastle.Asn1.X509.Qualified;
 
+
 namespace Project3_Final.Services
 {
-    public class CustomerServices : ServicePage 
+    public class CustomerServices : ServicePage
     {
         //Initialize List<Customers> which will store the Customer Objects to be manipulated.
         //List<Customer> exist for all Customers found in the SQL database, as well as a list for those whose status is active
@@ -32,6 +38,8 @@ namespace Project3_Final.Services
 
         public static void LoadFromDatabase()
         {
+
+
             
 
             //ensure that List<Customers> is empty whenever method is run. Will prevent duplication in List
@@ -41,40 +49,58 @@ namespace Project3_Final.Services
             //Query string will select all rows of data from table customers
             string query = "SELECT * FROM customers";
 
-            if (OpenConnection() == true)
+
+            //Try Catch block to incase of invalid cast exceptions
+            //ie table field is null
+            try
             {
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-
-                MySqlDataReader dataReader = cmd.ExecuteReader();
 
 
-                //Read the data and store them in the list
-                while (dataReader.Read())
+                if (OpenConnection() == true)
                 {
-                    Customer _ = new Customer((int)dataReader["custID"], (string)dataReader["firstName"], (string)dataReader["lastName"], (string)dataReader["phoneNumber"], (string)dataReader["email"], (DateTime)dataReader["dateOfBirth"], (string)dataReader["membershipType"], (bool)dataReader["accountStatus"]);
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
 
-                    //add to list<Customers> customers
-                    customers.Add(_);
-                    
-                    //add object instance to trainerDictionary
-                    AddToCustomerDictionary(_.CustID, _.FirstName, _.LastName);
+                    MySqlDataReader dataReader = cmd.ExecuteReader();
 
-                    //if object instance is active add to List<T> active<t>
-                    if ((bool)dataReader["accountStatus"])
+
+                    //Read the data and store them in the list
+                    while (dataReader.Read())
                     {
-                        activeCustomers.Add(_);
+                        Customer _ = new Customer((int)dataReader["custID"], (string)dataReader["firstName"], (string)dataReader["lastName"], (string)dataReader["phoneNumber"], (string)dataReader["email"], (DateTime)dataReader["dateOfBirth"], (string)dataReader["membershipType"], (bool)dataReader["accountStatus"]);
+
+                        //add to list<Customers> customers
+                        customers.Add(_);
+
+                        //add object instance to trainerDictionary
+                        AddToCustomerDictionary(_.CustID, _.FirstName, _.LastName);
+
+                        //if object instance is active add to List<T> active<t>
+                        if ((bool)dataReader["accountStatus"])
+                        {
+                            activeCustomers.Add(_);
+                        }
                     }
+
+                    dataReader.Close();
+
+                    CloseConnection();
+
+                }
+                else
+                {
+                    Debug.WriteLine("Unable to load and list using select");
                 }
 
-                dataReader.Close();
-
-                CloseConnection();
-
             }
-            else
+            catch (InvalidCastException ex)
             {
-                Debug.WriteLine("Unable to load and list using select");
+                Debug.WriteLine("Error loading from database. Contact database administrator John to check for null values or corrupt data in table\n" + ex.Message);
             }
+            finally
+            {
+                CloseConnection();
+            }
+
 
         }
 

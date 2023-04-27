@@ -4,6 +4,9 @@
  * Customers inherit from object Person and use some of the fields and methods within. 
  * 
  * This method contains basic fields,such as staffID (the primary key for the staff table in the MySQL database), as well as other inforamtion such as date of birth, memberhsip type, etc.
+ * 
+ * Date: 27 April 2023
+ * By: John Holloway and Victor Odhiambo
 
  */
 

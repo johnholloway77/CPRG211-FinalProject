@@ -1,4 +1,12 @@
-﻿@page "/session"
+﻿@* Main page for list of personal training session 
+    It displays a table and creates rows from List<Session> customers found in the file Services.SessionServices.cs
+    Each row will have a end button that will pass the specific Session instance for that row to the EditSession page
+
+    Date: 27 April 2023
+    By: John Holloway
+*@
+
+@page "/session"
 
 @using Project3_Final.Services;
 @using Project3_Final.Models;
@@ -52,17 +60,37 @@
 
     private string personalTrainer(int trainerID)
     {
-        return Services.TrainerServices.trainerDictionary[trainerID];
+        try{
+            return Services.TrainerServices.trainerDictionary[trainerID];
+        }
+        catch (KeyNotFoundException ex)
+        {
+            return $"trainerID: {trainerID}";
+        }
     }
 
     private string customerName(int custID)
     {
-        return Services.CustomerServices.customerDictionary[custID];
+        try
+        {
+            return Services.CustomerServices.customerDictionary[custID];
+        }
+        catch (KeyNotFoundException ex)
+        {
+            return $"custID: {custID}";
+        }
     }
 
     private string gymLocation(int gymID)
     {
-        return Services.GymService.gymDictionary[gymID];
+        try
+        {
+            return Services.GymService.gymDictionary[gymID];
+        }
+        catch (KeyNotFoundException ex)
+        {
+            return $"gymID: {gymID}";
+        }
     }
 
 }

@@ -2,7 +2,10 @@
  GymServices is a class which contains primarily static methods for the manipulation of gym objects, as well as updating the database for the respective object.
 
 Inherits several methods from class ServicePage
- 
+  * 
+ * Date: 27 April 2023
+ * By: John Holloway and Guntas Dhaliwal
+
  */
 
 using System;
@@ -36,37 +39,54 @@ namespace Project3_Final.Services
 
             string query = "SELECT * FROM gym";
 
-            if (OpenConnection() == true)
+            //Try Catch block to incase of invalid cast exceptions
+            //ie table field is null
+           
+            try
             {
-                MySqlCommand cmd = new MySqlCommand(query, connection);
 
-                MySqlDataReader dataReader = cmd.ExecuteReader();
 
-                while (dataReader.Read())
+                if (OpenConnection() == true)
                 {
-                    Gym _ = new Gym((int)dataReader["gymID"], (string)dataReader["street"], (string)dataReader["city"], (string)dataReader["prov"], (string)dataReader["postalCode"], (bool)dataReader["gymStatus"]);
-                   
-                    //add to list<Gym> gyms
-                    gyms.Add(_);
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
 
-                    //add object instance to gymDictionary
-                    AddToGymDictionary((int)dataReader["gymID"], (string)dataReader["street"], (string)dataReader["city"]);
+                    MySqlDataReader dataReader = cmd.ExecuteReader();
 
-                    //add to activelist
-                    if ((bool)dataReader["gymStatus"])
+                    while (dataReader.Read())
                     {
-                        activeGyms.Add(_);
+                        Gym _ = new Gym((int)dataReader["gymID"], (string)dataReader["street"], (string)dataReader["city"], (string)dataReader["prov"], (string)dataReader["postalCode"], (bool)dataReader["gymStatus"]);
+
+                        //add to list<Gym> gyms
+                        gyms.Add(_);
+
+                        //add object instance to gymDictionary
+                        AddToGymDictionary((int)dataReader["gymID"], (string)dataReader["street"], (string)dataReader["city"]);
+
+                        //add to activelist
+                        if ((bool)dataReader["gymStatus"])
+                        {
+                            activeGyms.Add(_);
+                        }
                     }
+
+                    dataReader.Close();
+
+                    CloseConnection();
                 }
-
-                dataReader.Close();
-
+                else
+                {
+                    Debug.WriteLine("Unable to load and list using select");
+                }
+            }
+            catch (InvalidCastException ex)
+            {
+               Debug.WriteLine("Error casting value from database. Check database data type and if null\n" + ex.Message);
+            }
+            finally //Close connection to prevent InvalidOperationException
+            {
                 CloseConnection();
             }
-            else
-            {
-                Debug.WriteLine("Unable to load and list using select");
-            }
+
         }
 
         public static void AddToDatabase(int gymID, string street, string city, string province, string postal, bool gymStatus)

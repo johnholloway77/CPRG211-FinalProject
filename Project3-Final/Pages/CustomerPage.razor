@@ -1,4 +1,12 @@
-﻿@page "/customer"
+﻿@* Main page for list of customers
+    It displays a table and creates rows from List<Customers> customers found in the file Services.CustomerServices.cs
+    Each row will have a end button that will pass the specific Customer instance for that row to the EditCustomer page
+
+    Date: 27 April 2023
+    By: John Holloway
+*@
+
+@page "/customer"
 
 @using Project3_Final.Services;
 @using Project3_Final.Models;

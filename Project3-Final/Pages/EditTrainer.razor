@@ -1,4 +1,16 @@
-﻿@page "/edittrainer"
+﻿@* Edit page for object instance of Gym
+    An object of type Gym is passed to this page from the GymPage and assigned to gymToEdit.
+    The table on this page has its fields bound to the various fields for the object instannce using @Bind-Value
+
+    At the bottom are additional methods used to check if the gym has any active personal training sessions should the use set the Gym's accountStatus to false.
+
+    If the user clicks on the "Update" button, the various validation methods are used before an SQL query is use to update the database. After completing this or when the user clicks "Cancle", the respective LoadFromDatabase() method is run and the NavigationManager navHelper is used to move the user back the the main GymPage.
+
+    Date: 27 April 2023
+    By: John Holloway
+*@
+
+@page "/edittrainer"
 
 @using Project3_Final.Services;
 @using Project3_Final.Models;

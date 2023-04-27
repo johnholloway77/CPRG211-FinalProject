@@ -6,6 +6,9 @@ It contains basic properties and methods common to all people type objects
  
 Additionally, it contains the abstract method OnAccountStatusChanged()
 This method is used by the child classes to see if the active/inactive status is changed. Methods will use this bool to run additional methods scanning if a person has been set to inactive while having active personal training sessions. 
+ * 
+ * Date: 27 April 2023
+ * By: John Holloway
 
  */
 
