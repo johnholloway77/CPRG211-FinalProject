@@ -1,4 +1,14 @@
-﻿using Project3_Final.Services;
+﻿/*
+ * Model page for object Customer
+ * 
+ * Customers inherit from object Person and use some of the fields and methods within. 
+ * 
+ * This method contains basic fields,such as custID (the primary key for the Customer table in the MySQL database), as well as other inforamtion such as date of birth, memberhsip type, etc.
+ * 
+ */
+
+
+using Project3_Final.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,7 +47,10 @@ namespace Project3_Final.Models
             return $"{CustID}:" +  base.ToString() + $"{DateOfBirth}:{MembershipType}:{AccountStatus}";
         }
 
-
+        /*
+        The method  OnAccountStatusChanged() is use to detect if accountStatus changes its value. It contains a if statement to check the variable personInitialized is true. The variable personInitialized is initially set to false when object is created. The first time the method is run this variable will be set to true, allowing the method AccountStatusChanged() to run the second time it is invoked.
+        This is to prevent the application from checking if the object has any active personal training sessions when it is created..
+        */
         protected override void OnAccountStatusChanged()
         {
             //check if this object instance has already been initialized or if it is its' first initialization

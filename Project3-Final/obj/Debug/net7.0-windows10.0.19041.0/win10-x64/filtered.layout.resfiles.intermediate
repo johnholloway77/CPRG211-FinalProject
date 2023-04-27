@@ -45,6 +45,7 @@ appiconWideTile.scale-125.png
 appiconWideTile.scale-150.png
 appiconWideTile.scale-200.png
 appiconWideTile.scale-400.png
+cat_logo.scale-100.png
 dotnet_bot.scale-100.png
 dotnet_bot.scale-125.png
 dotnet_bot.scale-150.png
@@ -60,6 +61,7 @@ wwwroot\Project3-Final.bundle.scp.css
 AboutAssets.txt
 Shared\MainLayout.razor.css
 Shared\NavMenu.razor.css
+wwwroot\cat_logo.png
 wwwroot\css\app.css
 wwwroot\css\bootstrap\bootstrap.min.css
 wwwroot\css\bootstrap\bootstrap.min.css.map

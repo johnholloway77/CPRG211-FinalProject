@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wM4T9cknU9MTfzdmMoXwzAlIloIaKdYCQmLjyH9NFTM=",
+  "Hash": "Mq8zGdHd3xYRD6DCojBO9WjvLa2Ueqp+Yz5QfC+10rM=",
   "Source": "Project3-Final",
   "BasePath": "/",
   "Mode": "Root",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\obj\\Debug\\net7.0-windows10.0.19041.0\\win10-x64\\scopedcss\\projectbundle\\Project3-Final.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\cat_logo.png",
+      "SourceId": "Project3-Final",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "cat_logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\cat_logo.png"
     },
     {
       "Identity": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\app.css",

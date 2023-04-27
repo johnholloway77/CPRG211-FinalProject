@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Project3-Final.styles.css"
     },
     {
+      "Id": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\cat_logo.png",
+      "PackagePath": "staticwebassets\\cat_logo.png"
+    },
+    {
       "Id": "C:\\Users\\John\\source\\repos\\johnholloway77\\CPRG211-FinalProject\\Project3-Final\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },

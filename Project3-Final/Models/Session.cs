@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ Method for personal training objects.
+ Contains sessionID, which is primary key in MySQL database, and several other IDs which are foriegn keys in the database.
+ 
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

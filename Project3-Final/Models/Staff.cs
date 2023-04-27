@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+ * Model page for object Staff
+ * 
+ * Customers inherit from object Person and use some of the fields and methods within. 
+ * 
+ * This method contains basic fields,such as staffID (the primary key for the staff table in the MySQL database), as well as other inforamtion such as date of birth, memberhsip type, etc.
+
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -36,24 +45,14 @@ namespace Project3_Final.Models
         public override string ToString()
 		{
 			return $"{StaffID}:{GymID}" + base.ToString() + $"{Salary}:{Position}:{AccountStatus}";
-		}
+        }
 
 
-		//OnAccountStatusChanged() does not need to be used for Staff Members
+		/* 
+		* The method  OnAccountStatusChanged() does not return or perform any operations as staff members cannot book personal training sessions.However, the function must exist as it is inherited from the abstract method within base class.
+		 */ 
         protected override void OnAccountStatusChanged()
         {
-        //    //check if this object instance has already been initialized or if it is its' first initialization
-
-        //    if (!this.personInitialized) //if first initialization set bool to true
-        //    {
-        //        this.personInitialized = true;
-        //    }
-
-        //    else //if object is already initialized, allow it to run functions
-        //    {
-
-        //        //Debug.WriteLine("Staff object OnAccountStatusChanged() run");
-        //    }
 
         }
     }

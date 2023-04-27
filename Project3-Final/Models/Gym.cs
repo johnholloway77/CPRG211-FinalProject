@@ -14,7 +14,10 @@ namespace Project3_Final.Models
 		private string province;
 		private string postal;
 		private string location;
+
 		private bool gymStatus;
+		private bool gymInitialized;
+		private bool gymStatusChanged;
 
 		public Gym(int gymID, string street, string city, string province, string postal, bool gymStatus)
 		{
@@ -31,12 +34,39 @@ namespace Project3_Final.Models
 		public string City { get => city; set => city = value; }
 		public string Province { get => province; set => province = value; }
 		public string Postal { get => postal; set => postal = value; }
-        public string Location { get => location; set => location = value; }
-        public bool GymStatus { get => gymStatus; set => gymStatus = value; }
+		public string Location { get => location; set => location = value; }
+		public bool GymStatus
+		{
+			get => gymStatus;
+			set
+			{
+				gymStatus = value;
+				OnGymStatusChanged();
+			}
+		}
 
-        public override string ToString()
+		public bool GymStatusChanged { get => gymStatusChanged; set => gymStatusChanged = value; }
+
+		public override string ToString()
 		{
 			return $"{GymID}" + base.ToString() + $"{Street}:{City}:{Province}:{Postal}:{gymStatus}";
+		}
+
+        /*
+		The method  OnGymStatusChanged() is use to detect if accountStatus changes its value. It contains a if statement to check the variable gymInitialized is true. The variable personInitialized is initially set to false when object is created. The first time the method is run this variable will be set to true, allowing the method OnGymStatusChanged() to run the second time it is invoked.
+		This is to prevent the application from checking if the object has any active personal training sessions when it is created..
+		*/
+        private void OnGymStatusChanged()
+		{
+			if (!this.gymInitialized) //if first initialized set bool to true
+			{
+				this.gymInitialized = true;
+			}
+			else //if object is already initialized, all it to run functions
+			{
+				this.GymStatusChanged = true;
+			}
+
 		}
 	}
 }

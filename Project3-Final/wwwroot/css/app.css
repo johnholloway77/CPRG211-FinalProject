@@ -4,6 +4,13 @@ html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+#indexGreeting{
+    text-align:center
+}
+h1{
+    text-align:center
+}
+
 h1:focus {
     outline: none;
 }

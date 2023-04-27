@@ -811,6 +811,9 @@
     <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\Project3-Final.bundle.scp.css">
       <PackagePath>wwwroot\Project3-Final.bundle.scp.css</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\wwwroot\cat_logo.png">
+      <PackagePath>wwwroot\cat_logo.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\wwwroot\css\app.css">
       <PackagePath>wwwroot\css\app.css</PackagePath>
     </AppxPackagedFile>
@@ -1008,6 +1011,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\cat_logo.scale-100.png">
+      <PackagePath>cat_logo.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\John\source\repos\johnholloway77\CPRG211-FinalProject\Project3-Final\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>

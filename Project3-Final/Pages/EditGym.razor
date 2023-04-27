@@ -2,6 +2,7 @@
 @using Project3_Final.Services;
 @using Project3_Final.Models;
 @using Microsoft.AspNetCore.Components.Forms
+@using System.Diagnostics;
 
 @inject NavigationManager navHelper
 <h3>EditGym</h3>
@@ -96,13 +97,79 @@
 
         if (validGym)
         {
-            updateGym();
+            //updateGym();
+            checkForAccountStatusChange();
         }
         else
         {
             Application.Current.MainPage.DisplayAlert("Error, cannot update gym", alertMessage, "Okay");
         }
     }
+
+
+    private async Task checkForAccountStatusChange()
+    {
+        if (gymToEdit.GymStatusChanged)
+        {
+            await activeSessionNotification();
+            gymToEdit.GymStatusChanged = false;
+        }
+        else
+        {
+            updateGym();
+        }
+    }
+
+
+
+    //notify user if gym has open training sessions when customer is deactivated.
+    public async Task activeSessionNotification()
+    {
+        var sessionInformation = SessionService.CheckForActiveSessions(gymToEdit.GetType(), gymToEdit.GymID);
+        //Debug.WriteLine("OnAccountStatusChange() has run completely");
+
+
+
+        if (sessionInformation.Item1 == true && gymToEdit.GymStatus == false)
+        {
+            bool action = await Application.Current.MainPage.DisplayAlert("Warning", $"{gymToEdit.Street} {gymToEdit.City} has active client training sessions. \nDeactivate Active Sessions for this location?", "Deactivate Sessions", "Ignore Warning");
+
+            switch (action)
+            {
+                case true:
+                    {
+                        Debug.WriteLine("Running DeactivateSessions(sessionInformation.Item2);");
+                        Services.SessionService.DeactivateSessions(sessionInformation.Item2);
+                        //Console.WriteLine("Deactivate Sessions Method to be engaged.");
+
+                        Debug.WriteLine("Running updateGym();");
+                        updateGym();
+
+                        break;
+                    }
+                case false:
+                    {
+                        updateGym();
+                        break;
+                    }
+
+            }
+
+
+        }
+        else
+        {
+            updateGym();
+        }
+    }
+
+
+
+
+
+
+
+
 
     internal void updateGym()
     {

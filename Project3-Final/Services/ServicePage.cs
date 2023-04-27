@@ -51,14 +51,15 @@ namespace Project3_Final.Services
                 {
                     case 0:
                         Console.WriteLine("Cannot connect to server. Contact Adminsitrator");
+                        Application.Current.MainPage.DisplayAlert("Error", "Cannot connect to server. Contact Adminsitrator", "Okay");
                         break;
 
                     case 1045:
                         Console.WriteLine("Invalid username/password. Please try again");
+                        Application.Current.MainPage.DisplayAlert("Error", "Invalid username/password. Please try again", "Okay");
                         break;
                 }
-                Console.WriteLine("MySQL response: " + ex.Message);
-                Console.WriteLine("MySQL response: " + ex.Number);
+
                 return false;
             }
         }

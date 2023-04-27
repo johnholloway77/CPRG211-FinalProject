@@ -83,31 +83,31 @@ namespace Project3_Final.Services
 
 
 
-        //Function will check if customer/trainer has active training sessions, return tuple with
+        //Function will check if customer/trainer/gym has active training sessions, return tuple with
         //bool indicating if the user does or not, and a list<sessions> containing all of the sessions in which
-        //the person is involved
-        public static Tuple<bool, List<Session>> CheckForActiveSessions(Type personType, int personID)
+        //the person/gym is involved
+        public static Tuple<bool, List<Session>> CheckForActiveSessions(Type objectType, int objectID)
         {
             bool hasActiveSessions = false;
-            List<Session> personSessions = new List<Session>();
+            List<Session> objectSessions = new List<Session>();
 
-            Debug.WriteLine("1. Type.Name= " + personType.Name);
+            Debug.WriteLine("1. Type.Name= " + objectType.Name);
 
             //check what type of object called function, adjust checkID appropriately.
             //Because a Customer, Trainer or Gym can have the same number for their ID a 
             //switch is needed to run specific foreach loops
-            switch (personType.Name)
+            switch (objectType.Name)
             {
                 case "Customer":
                     {
-                        Debug.WriteLine("2. Type.Name= " + personType.Name + " = \"Customer\"");
+                        Debug.WriteLine("2. Type.Name= " + objectType.Name + " = \"Customer\"");
 
                         foreach (Session session in SessionService.activeSessions)
                         {
-                            if (session.CustID == personID)
+                            if (session.CustID == objectID)
                             {
                                 hasActiveSessions = true;
-                                personSessions.Add(session);
+                                objectSessions.Add(session);
                             }
                         }
 
@@ -115,25 +115,40 @@ namespace Project3_Final.Services
                     }
                 case "Trainer":
                     {
-                        Debug.WriteLine("2. Type.Name= " + personType.Name + " = \"Trainer\"");
+                        Debug.WriteLine("2. Type.Name= " + objectType.Name + " = \"Trainer\"");
 
                         foreach (Session session in SessionService.activeSessions)
                         {
-                            if (session.TrainerID == personID)
+                            if (session.TrainerID == objectID)
                             {
                                 hasActiveSessions = true;
-                                personSessions.Add(session);
+                                objectSessions.Add(session);
+                            }
+                        }
+
+                        break;
+                    }
+                case "Gym":
+                    {
+                        Debug.WriteLine("2. Type.Name= " + objectType.Name + " = \"Gym\"");
+
+                        foreach (Session session in SessionService.activeSessions)
+                        {
+                            if (session.GymID == objectID)
+                            {
+                                hasActiveSessions = true;
+                                objectSessions.Add(session);
                             }
                         }
 
                         break;
                     }
 
-             }
+            }
 
 
             
-            return Tuple.Create(hasActiveSessions, personSessions);
+            return Tuple.Create(hasActiveSessions, objectSessions);
 
         }
 

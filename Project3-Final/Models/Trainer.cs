@@ -38,9 +38,13 @@ namespace Project3_Final.Models
 			return $"{TrainerId}" + base.ToString() + $"{BaseSalary}:{HourlyFee}:{Certification}:{AccountStatus}";
 		}
 
+
+        /*
+        The method  OnAccountStatusChanged() is use to detect if accountStatus changes its value. It contains a if statement to check the variable personInitialized is true. The variable personInitialized is initially set to false when object is created. The first time the method is run this variable will be set to true, allowing the method AccountStatusChanged() to run the second time it is invoked.
+        This is to prevent the application from checking if the object has any active personal training sessions when it is created..
+        */
         protected override void OnAccountStatusChanged()
         {
-			//check if this object instance has already been initialized or if it is its' first initialization
 
 			if (!this.personInitialized) //if first initialization set bool to true
             {
