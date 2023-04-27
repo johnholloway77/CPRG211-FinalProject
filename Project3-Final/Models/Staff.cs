@@ -1,5 +1,5 @@
 ﻿/*
- * Model page for object Staff
+ * File for object Staff
  * 
  * Customers inherit from object Person and use some of the fields and methods within. 
  * 

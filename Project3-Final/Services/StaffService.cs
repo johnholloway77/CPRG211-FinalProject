@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ StaffServices is a class which contains primarily static methods for the manipulation of Staff objects, as well as updating the database for the respective object.
+
+Inherits several methods from class ServicePage
+ 
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +18,7 @@ using System.Diagnostics;
 
 namespace Project3_Final.Services
 {
-    public class StaffServices : ServicePage //, ImySqlConnectable
+    public class StaffServices : ServicePage
     {
         public static List<Staff> staffs = new List<Staff>();
 

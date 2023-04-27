@@ -134,6 +134,10 @@
         }
     }
 
+    /*
+     *Method checks if account status was changed from ACTIVE to INACTIVE by checking the bool customerToEdit.AccountStatusChanged
+     If this bool is true, it will run activeSessionNotification();
+     */
     private async Task checkForAccountStatusChange()
     {
         if (trainerToEdit.AccountStatusChanged)
@@ -148,7 +152,20 @@
     }
 
 
-    //notify user if customer has open training sessions when customer is deactivated.
+    /*
+     activeSessionNotification() is used to check if object has any active training sessions.
+     If the object is associated with active training sessions, a prompt will appear asking the user if they want to set the
+     corresponsing training sessions to inactive or ignore the warning.
+
+     The value for var sessionInformation is a tuple assigned by the method it invokes. The method, CheckForActiveSessions sends
+     the Type of the object being edited (in this case "Trainer") and also sends this object's TrainerID. The value returned is a
+     tuple containing two Items.
+     sessionInformation.Item1 is a bool indicating if object has any active personal training sessions
+     sessionInformation.Item2 is a List<Session> with all active Sessions associated with this object.
+
+     If there are not any active sessions associated with this object, Item1 will be FALSE and Item2 will contain an empty List<Session>
+
+     */
     public async Task activeSessionNotification()
     {
         var sessionInformation = SessionService.CheckForActiveSessions(trainerToEdit.GetType(), trainerToEdit.TrainerId);

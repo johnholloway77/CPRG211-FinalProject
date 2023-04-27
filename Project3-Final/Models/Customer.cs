@@ -1,5 +1,5 @@
 ﻿/*
- * Model page for object Customer
+ * File for object Customer
  * 
  * Customers inherit from object Person and use some of the fields and methods within. 
  * 

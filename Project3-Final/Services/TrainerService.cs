@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ TrainerServices is a class which contains primarily static methods for the manipulation of Trainer objects, as well as updating the database for the respective object.
+
+Inherits several methods from class ServicePage
+ 
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +17,7 @@ using System.Diagnostics;
 
 namespace Project3_Final.Services
 {
-    public class TrainerServices : ServicePage //, ImySqlConnectable
+    public class TrainerServices : ServicePage
     {
         //Initialize List<TrainingSession> which will store the Trainer Objects to be manipulated.
         public static List<Trainer> trainers = new List<Trainer>();

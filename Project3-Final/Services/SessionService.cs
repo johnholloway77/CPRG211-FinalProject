@@ -1,4 +1,13 @@
-﻿using MySql.Data.MySqlClient;
+﻿/*
+ SessionServices is a class which contains primarily static methods for the manipulation of session objects, as well as updating the database for the respective object.
+
+Inherits several methods from class ServicePage
+
+Unlike other service files, this file contains additional methods for 
+
+ */
+
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -83,15 +92,18 @@ namespace Project3_Final.Services
 
 
 
-        //Function will check if customer/trainer/gym has active training sessions, return tuple with
-        //bool indicating if the user does or not, and a list<sessions> containing all of the sessions in which
-        //the person/gym is involved
+        /*
+         Function will check if customer/trainer/gym has active training sessions
+        
+        CheckForActiveSessions will receive input of Type identifying the type of object which called the method, and return tuple<bool, List<session>> with the bool indicating if the person/gym has active personal training sessions, and a list<sessions> containing all of the sessions with which the person/gym is involved
+        */
         public static Tuple<bool, List<Session>> CheckForActiveSessions(Type objectType, int objectID)
         {
             bool hasActiveSessions = false;
             List<Session> objectSessions = new List<Session>();
 
             Debug.WriteLine("1. Type.Name= " + objectType.Name);
+
 
             //check what type of object called function, adjust checkID appropriately.
             //Because a Customer, Trainer or Gym can have the same number for their ID a 
@@ -152,6 +164,8 @@ namespace Project3_Final.Services
 
         }
 
+
+        //In method DeactivateSessions is invoked, it will recieve a List<Sessions> and go through each list, updating the MySql table for sessions. All session rows that have the matching sessionID will be set to sessionStatus=FALSE
         public static void DeactivateSessions(List<Session> sessions)
         {
             Debug.WriteLine("List<Sessions> session.Count = " +  sessions.Count);

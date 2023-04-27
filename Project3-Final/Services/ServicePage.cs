@@ -1,4 +1,16 @@
-﻿using MySql.Data.MySqlClient;
+﻿/*
+ Parent class for other service files (Customer Service, Gym Service, etc).
+
+It contains methods that are common to all of the child classes.
+
+This is an abstract class which cannot be instantated. 
+ 
+
+This class should have been named "Services" or something instead of "ServicePage" since it doesn't display a GUI page, but I'm too tired to change it now. 
+
+ */
+
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;

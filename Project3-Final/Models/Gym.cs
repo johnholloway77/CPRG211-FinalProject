@@ -1,4 +1,17 @@
-﻿using System;
+﻿/*
+ * File for object Gym
+ * 
+ * Customers inherit from object Person and use some of the fields and methods within. 
+ * 
+ * This method contains basic fields,such as gymID (the primary key for the gym table in the MySQL database), as well as other inforamtion such as date of birth, memberhsip type, etc.
+
+Additionally, it contains the abstract method gymStatusChanged()
+This method is used  to see if the active/inactive status of the gym instance is changed. Methods will use this bool to run additional methods scanning if a gym has been set to inactive while having active personal training sessions. 
+
+
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

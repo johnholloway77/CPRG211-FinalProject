@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ GymServices is a class which contains primarily static methods for the manipulation of gym objects, as well as updating the database for the respective object.
+
+Inherits several methods from class ServicePage
+ 
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +21,7 @@ using System.Threading.Tasks;
 
 namespace Project3_Final.Services
 {
-    public class GymService : ServicePage //, ImySqlConnectable
+    public class GymService : ServicePage 
     {
         //Initialize List<Gym> which will store the Customer Objects to be manipulated.
         public static List<Gym> gyms = new List<Gym>();

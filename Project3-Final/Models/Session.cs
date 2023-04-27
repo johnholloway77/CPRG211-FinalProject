@@ -1,5 +1,5 @@
 ﻿/*
- Method for personal training objects.
+ File for personal training objects.
  Contains sessionID, which is primary key in MySQL database, and several other IDs which are foriegn keys in the database.
  
  */

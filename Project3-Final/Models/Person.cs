@@ -1,4 +1,15 @@
-﻿using System;
+﻿/*
+File for abstract class Person
+
+This abstract method is used as a blue print for the other people objects: Customer, Staff, and Trainer.
+It contains basic properties and methods common to all people type objects
+ 
+Additionally, it contains the abstract method OnAccountStatusChanged()
+This method is used by the child classes to see if the active/inactive status is changed. Methods will use this bool to run additional methods scanning if a person has been set to inactive while having active personal training sessions. 
+
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -16,7 +27,11 @@ namespace Project3_Final.Models
         private string email;
 
         private bool accountStatus;
-        protected bool personInitialized;
+
+        //personInitialized will be by defaul false, but set to true AFTER the object is first initialized and accountStatus is set 
+        protected bool personInitialized; 
+
+        //This bool is set to true when accountStatus is set only AFTER the object is first initialized.  
         private bool accountStatusChanged;
 
         public string FirstName { get => firstName; set => firstName = value; }

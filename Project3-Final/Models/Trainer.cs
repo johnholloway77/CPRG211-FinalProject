@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+ * File for object Trainer
+ * 
+ * Customers inherit from object Person and use some of the fields and methods within. 
+ * 
+ * This method contains basic fields,such as trainerID (the primary key for the trainer table in the MySQL database), as well as other inforamtion such as date of birth, memberhsip type, etc.
+
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;

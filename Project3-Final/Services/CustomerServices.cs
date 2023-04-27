@@ -1,9 +1,18 @@
-﻿using Project3_Final.Models;
+﻿/*
+ Customer Services is a class which contains primarily static methods for the manipulation of Customer objects, as well as updating the database for the respective object.
+
+Inherits several methods from class ServicePage
+ 
+ */
+
+using Project3_Final.Models;
 using MySql.Data.MySqlClient;
 using System.Reflection;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+
+
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,9 +20,10 @@ using Org.BouncyCastle.Asn1.X509.Qualified;
 
 namespace Project3_Final.Services
 {
-    public class CustomerServices : ServicePage //, ImySqlConnectable
+    public class CustomerServices : ServicePage 
     {
         //Initialize List<Customers> which will store the Customer Objects to be manipulated.
+        //List<Customer> exist for all Customers found in the SQL database, as well as a list for those whose status is active
         public static List<Customer> customers = new List<Customer>();
         public static List<Customer> activeCustomers = new List<Customer>();
 
